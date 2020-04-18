@@ -12,7 +12,11 @@ func _on_SelectableArea_mouse_entered():
 
 func _on_SelectableArea_mouse_exited():
 	AlienMind.deselect_object(self)
-	
+
+func _on_ThrowableObject_body_entered(body):
+	if body.is_in_group("actor"):
+		body.hit()
+
 func _on_ThrowableObject_sleeping_state_changed():
 	if not sleeping:
 		contact_monitor = true
