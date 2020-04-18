@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://actors/Carrier.tscn" type="PackedScene" id=1]
 [ext_resource path="res://throwables/GarbageOpen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenary/Map.tscn" type="PackedScene" id=3]
+[ext_resource path="res://actors/AlienBody.tscn" type="PackedScene" id=4]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 435.054, -69.8024, 587.846, -75.6342, 502.702, -27.8138, 316.086, 301.3, 639.165, 341.162, 679.988, 443.801, 390.733, 519.614, 215.78, 316.463, 691.651, 138.974, 683.487, 17.6739, 735.973, -33.6455, 823.449, 56.1635, 830.447, 176.298, 748.802, 270.772, 686.986, 197.292, 572.683, 214.787, 445.551, 266.31, -115.463, 514.948, -131.305, 266.949, -23.4108, 252.669, 122.563, 314.55, 535.098, 198.722, 427.204, 165.402, 514.471, 140.016, -30.3199, 32.8365, -17.49, -84.965, 32.6631, -84.965, 170.292, -83.7986, 86.3152, 63.1616, -17.49, 79.4905, 229.776, 143.843, 249.604, -84.965, 360.408, -77.9669, 509.711, 74.9619 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11, 12, 13 ), PoolIntArray( 14, 8, 13 ), PoolIntArray( 15, 14, 13, 4, 16 ), PoolIntArray( 6, 17, 18, 19, 20 ), PoolIntArray( 6, 20, 7 ), PoolIntArray( 4, 3, 16 ), PoolIntArray( 21, 15, 16, 22 ), PoolIntArray( 23, 21, 22 ), PoolIntArray( 24, 25, 26, 27, 28, 29 ), PoolIntArray( 22, 30, 28, 27, 31, 32, 0, 2, 33 ), PoolIntArray( 22, 33, 23 ) ]
+outlines = [ PoolVector2Array( 229.776, 143.843, 427.204, 165.402, 445.551, 266.31, 316.086, 301.3, 215.78, 316.463, 122.563, 314.55, -23.4108, 252.669, -131.305, 266.949, -115.463, 514.948, 390.733, 519.614, 679.988, 443.801, 639.165, 341.162, 748.802, 270.772, 830.447, 176.298, 823.449, 56.1635, 735.973, -33.6455, 683.487, 17.6739, 691.651, 138.974, 686.986, 197.292, 572.683, 214.787, 535.098, 198.722, 514.471, 140.016, 509.711, 74.9619, 502.702, -27.8138, 587.846, -75.6342, 435.054, -69.8024, 360.408, -77.9669, 249.604, -84.965, 170.292, -83.7986, 32.6631, -84.965, -17.49, -84.965, -30.3199, 32.8365, -17.49, 79.4905, 86.3152, 63.1616 ) ]
 
 [node name="Level" type="Node2D"]
 
@@ -14,3 +20,16 @@ position = Vector2( 475.789, 221.053 )
 
 [node name="Map" parent="." instance=ExtResource( 3 )]
 tile_data = PoolIntArray( 6, -1073741824, 0, 10, -1073741824, 0, 65537, 0, 0, 196620, 1610612736, 0, 327682, -1610612736, 0, 393223, -1610612736, 0 )
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 2.0
+default_color = Color( 0.4, 0.501961, 1, 1 )
+
+[node name="Navigation" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation"]
+position = Vector2( 252.281, 230.068 )
+navpoly = SubResource( 1 )
+
+[node name="AlienBody" parent="." instance=ExtResource( 4 )]
+position = Vector2( 660.155, 272.926 )
