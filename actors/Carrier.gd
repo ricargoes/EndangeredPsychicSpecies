@@ -62,10 +62,12 @@ func hit():
 
 func stun():
 	$StunCooldown.start()
+	$HeadStars.emitting = true
 	stunned = true
 
 func _on_StunCooldown_timeout():
 	stunned = false
+	$HeadStars.emitting = false
 
 func spawn_alien():
 	var alien = preload("res://actors/AlienBody.tscn").instance()
