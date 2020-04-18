@@ -16,13 +16,37 @@ _global_script_class_icons={
 [application]
 
 config/name="Survival"
-config/icon="res://icon.png"
+run/main_scene="res://level/Level.tscn"
+config/icon="res://throwables/garbage_open.png"
+
+[autoload]
+
+AlienMind="*res://actors/AlienMind.gd"
+
+[input]
+
+alien_grab_object={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+alien_set_destination={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 
 [layer_names]
 
 2d_physics/layer_1="actors"
 2d_physics/layer_2="throwables"
 2d_physics/layer_3="scenary"
+
+[physics]
+
+2d/default_gravity=0
+2d/default_gravity_vector=Vector2( 0, 0 )
+2d/default_linear_damp=1.0
 
 [rendering]
 
