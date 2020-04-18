@@ -26,12 +26,16 @@ func _process(delta):
 	if carrying:
 		speed *= 3/4.0
 	
-	set_rotation(movement_dir.angle())
+	if movement_dir != Vector2.ZERO:
+		set_rotation(movement_dir.angle())
 	move_and_slide(speed)
 	if speed == Vector2.ZERO:
-		$Sprite.play("stand")
+		$Sprite.play("standing")
 	else:
-		$Sprite.play("running")
+		if carrying:
+			$Sprite.play("running_alien")
+		else:
+			$Sprite.play("running")
 
 func try_dashing():
 	pass
