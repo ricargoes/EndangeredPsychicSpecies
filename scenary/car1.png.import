@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/open_garbage.png-661b678c9d9d167178e004221eddf0de.stex"
+path="res://.import/car1.png-cbb1c439d26f01d6750eae1770f3cd6e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://throwables/open_garbage.png"
-dest_files=[ "res://.import/open_garbage.png-661b678c9d9d167178e004221eddf0de.stex" ]
+source_file="res://scenary/car1.png"
+dest_files=[ "res://.import/car1.png-cbb1c439d26f01d6750eae1770f3cd6e.stex" ]
 
 [params]
 

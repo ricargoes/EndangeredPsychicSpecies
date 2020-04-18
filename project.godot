@@ -47,6 +47,7 @@ alien_set_destination={
 2d/default_gravity=0
 2d/default_gravity_vector=Vector2( 0, 0 )
 2d/default_linear_damp=1.0
+2d/default_angular_damp=2.0
 
 [rendering]
 
