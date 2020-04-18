@@ -15,6 +15,7 @@ func _input(event):
 			var throwing_vector = get_viewport().get_mouse_position() - _throwing_object.get_global_position()
 			var strength = min(throwing_vector.length(), 500)/500.0
 			_throwing_object.impulse(3*throwing_vector)
+			_throwing_object = null
 			
 
 func select_object(throwable):
