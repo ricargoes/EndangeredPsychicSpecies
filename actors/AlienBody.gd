@@ -16,3 +16,8 @@ func _process(delta):
 		if points_to_destination[-1] != points_to_destination[1] or vector_to_next.length() > 20:
 			set_rotation(vector_to_next.angle())
 			move_and_slide(vector_to_next.normalized()*max_speed)
+			$Sprite.play("crawling")
+		else:
+			$Sprite.play("standing")
+	else:
+		$Sprite.play("standing")
