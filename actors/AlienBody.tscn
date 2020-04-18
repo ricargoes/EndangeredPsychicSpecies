@@ -24,14 +24,18 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=2]
 radius = 18.8556
 
-[node name="AlienBody" type="KinematicBody2D"]
+[node name="AlienBody" type="KinematicBody2D" groups=[
+"actor",
+"alien",
+]]
+collision_mask = 6
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 rotation = 1.5708
 frames = SubResource( 1 )
 animation = "crawling"
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

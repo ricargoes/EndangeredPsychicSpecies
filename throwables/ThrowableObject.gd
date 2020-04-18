@@ -12,3 +12,8 @@ func _on_SelectableArea_mouse_entered():
 
 func _on_SelectableArea_mouse_exited():
 	AlienMind.deselect_object(self)
+	
+func _on_ThrowableObject_sleeping_state_changed():
+	if not sleeping:
+		contact_monitor = true
+		contacts_reported = 3

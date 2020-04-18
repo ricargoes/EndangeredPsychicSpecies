@@ -56,23 +56,28 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 12.0051
-height = 31.7192
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12.0051, 25.5191 )
 
-[node name="Carrier" type="KinematicBody2D"]
+[node name="Carrier" type="KinematicBody2D" groups=[
+"actor",
+]]
+collision_mask = 6
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 rotation = 1.5708
 frames = SubResource( 1 )
 animation = "standing_watch"
-frame = 4
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -3, -1 )
 shape = SubResource( 2 )
 
 [node name="DashCooldown" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="StunCooldown" type="Timer" parent="."]
+wait_time = 2.0
+[connection signal="timeout" from="StunCooldown" to="." method="_on_StunCooldown_timeout"]
