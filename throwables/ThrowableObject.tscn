@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://throwables/placeholder-sprite.png" type="Texture" id=1]
+[ext_resource path="res://throwables/garbage_open.png" type="Texture" id=1]
 [ext_resource path="res://throwables/ThrowableObject.gd" type="Script" id=2]
 [ext_resource path="res://throwables/SelectableArea.gd" type="Script" id=3]
 
