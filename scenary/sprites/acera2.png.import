@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/daddyrunning3.png-93648504c3281db9afc2209bcaf71488.stex"
+path="res://.import/acera2.png-d168bc08558ac1e7e7c97ea84cc0b4a4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/daddyrunning3.png"
-dest_files=[ "res://.import/daddyrunning3.png-93648504c3281db9afc2209bcaf71488.stex" ]
+source_file="res://scenary/sprites/acera2.png"
+dest_files=[ "res://.import/acera2.png-d168bc08558ac1e7e7c97ea84cc0b4a4.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/daddyrunning2.png-56c327694217e88a96cc2b43ab762df4.stex"
+path="res://.import/daddycreaturerunning1_1.png-69500d98c4bc3cae7107e3435897695c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/daddyrunning2.png"
-dest_files=[ "res://.import/daddyrunning2.png-56c327694217e88a96cc2b43ab762df4.stex" ]
+source_file="res://actors/sprites/daddycreaturerunning1_1.png"
+dest_files=[ "res://.import/daddycreaturerunning1_1.png-69500d98c4bc3cae7107e3435897695c.stex" ]
 
 [params]
 

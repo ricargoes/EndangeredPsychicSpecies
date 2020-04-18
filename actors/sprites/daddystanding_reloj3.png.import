@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/daddyrunning4.png-fb668cbcc7d9c5dbcc76218413b89fc4.stex"
+path="res://.import/daddystanding_reloj3.png-1f912edf8e860fc86c78b55d391b8059.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://actors/daddyrunning4.png"
-dest_files=[ "res://.import/daddyrunning4.png-fb668cbcc7d9c5dbcc76218413b89fc4.stex" ]
+source_file="res://actors/sprites/daddystanding_reloj3.png"
+dest_files=[ "res://.import/daddystanding_reloj3.png-1f912edf8e860fc86c78b55d391b8059.stex" ]
 
 [params]
 
