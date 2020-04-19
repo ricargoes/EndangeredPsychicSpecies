@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://scenary/roof_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenary/detail_tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://scenary/CarRed.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenary/rough_tileset.tres" type="TileSet" id=7]
@@ -39,6 +40,12 @@ tile_data = PoolIntArray( 655366, 0, 0, 720903, 0, 0, 851973, 3, 0, 917512, 1, 0
 tile_set = ExtResource( 8 )
 cell_size = Vector2( 120, 240 )
 format = 1
+
+[node name="Roof" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 240, 240 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 7, 0, 11, 7, 0, 12, 7, 0, 13, 4, 0, 65536, 5, 0, 65549, 3, 0, 131072, 5, 0, 131085, 3, 0, 196608, 5, 0, 196621, 3, 0, 262144, 5, 0, 262157, 3, 0, 327680, 5, 0, 327693, 3, 0, 393216, 5, 0, 393222, 0, 0, 393223, 2, 0, 393229, 3, 0, 458752, 5, 0, 458758, 6, 0, 458759, 8, 0, 458765, 3, 0, 524288, 5, 0, 524301, 3, 0, 589824, 5, 0, 589837, 3, 0, 655360, 5, 0, 655373, 3, 0, 720896, 5, 0, 720909, 3, 0, 786432, 5, 0, 786445, 3, 0, 851968, 4, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 4, 0 )
 
 [node name="Stuff" type="Node2D" parent="."]
 
