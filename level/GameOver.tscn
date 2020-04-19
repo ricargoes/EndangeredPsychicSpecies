@@ -67,3 +67,7 @@ margin_right = 1920.0
 margin_bottom = 595.0
 text = "Press any key to restart"
 align = 1
+
+[node name="SettleDownTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true

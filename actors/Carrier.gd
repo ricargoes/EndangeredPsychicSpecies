@@ -69,6 +69,7 @@ func hit():
 	if carrying:
 		carrying = false
 		spawn_alien()
+		get_tree().call_group("traps", "mark", true)
 
 func stun():
 	$StunCooldown.start()
