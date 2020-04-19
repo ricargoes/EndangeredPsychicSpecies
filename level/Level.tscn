@@ -11,14 +11,14 @@
 [node name="Background" parent="." instance=ExtResource( 3 )]
 
 [node name="Carrier" parent="." instance=ExtResource( 1 )]
-position = Vector2( 83.3469, 350.854 )
+position = Vector2( 640, 640 )
 
 [node name="Line2D" type="Line2D" parent="."]
 width = 2.0
 default_color = Color( 0.4, 0.501961, 1, 1 )
 
 [node name="GarbageOpen" parent="." instance=ExtResource( 2 )]
-position = Vector2( 280.667, 273.507 )
+position = Vector2( 1320, 680 )
 
 [node name="AlienMind" parent="." instance=ExtResource( 4 )]
 
