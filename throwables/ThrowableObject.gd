@@ -9,7 +9,7 @@ func _on_ImpulseTime_timeout():
 
 func _on_ThrowableObject_body_entered(body):
 	$Hit.play(0.25)
-	if body.is_in_group("actor"):
+	if body.has_method("hit"):
 		body.hit()
 
 func _on_ThrowableObject_sleeping_state_changed():
