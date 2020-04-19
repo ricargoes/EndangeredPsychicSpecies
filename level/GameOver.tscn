@@ -71,3 +71,5 @@ align = 1
 [node name="SettleDownTimer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="EndMusic" type="AudioStreamPlayer" parent="."]

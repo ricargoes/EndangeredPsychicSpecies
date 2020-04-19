@@ -21,8 +21,12 @@ func _alien_wins():
 	$VBoxContainer/Who.text = "Alien wins"
 	$VBoxContainer/HBoxContainer/Descrption.text = "The baby alien gets killed while exploring the world. Well, at least he died FREE!"
 	$VBoxContainer/HBoxContainer/Picture.texture = preload("res://actors/sprites/creaturecrawling2.png")
+	$EndMusic.stream = preload("res://music/Tema2.ogg")
+	$EndMusic.play()
 
 func _carrier_wins():
 	$VBoxContainer/Who.text = "Frank wins"
 	$VBoxContainer/HBoxContainer/Descrption.text = "Frank manages to keep the alien alive desite its best efforts. The alien is not mature enough to know the world is dangerous. Frank knows best."
 	$VBoxContainer/HBoxContainer/Picture.texture = preload("res://actors/sprites/daddystanding_reloj4.png")
+	$EndMusic.stream = preload("res://music/Tema1.ogg")
+	$EndMusic.play()
