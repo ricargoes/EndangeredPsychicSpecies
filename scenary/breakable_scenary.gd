@@ -6,4 +6,4 @@ func hit():
 	$Broken.show()
 	$Broken.play("default")
 	if has_node("Trap"):
-		$Trap.active = true
+		$Trap.activate()
