@@ -34,7 +34,10 @@ func _process(delta):
 			set_rotation(movement_dir.angle())
 		move_and_slide(speed, Vector2.ZERO, false, 4, PI/4, false)
 		if movement_dir == Vector2.ZERO:
-			$Sprite.play("standing")
+			if carrying:
+				$Sprite.play("standing_alien")
+			else:
+				$Sprite.play("standing")
 		else:
 			if carrying:
 				$Sprite.play("running_alien")
@@ -42,7 +45,7 @@ func _process(delta):
 				$Sprite.play("running")
 	else:
 		move_and_slide(dashing_dir*max_speed*2)
-		$Sprite.play("standing_watch")
+		$Sprite.play("dashing")
 
 func try_dashing():
 	if $DashCooldown.is_stopped():
@@ -66,6 +69,7 @@ func hit():
 	if carrying:
 		carrying = false
 		spawn_alien()
+		get_tree().call_group("traps", "mark", true)
 
 func stun():
 	$StunCooldown.start()

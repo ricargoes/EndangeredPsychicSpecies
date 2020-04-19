@@ -19,6 +19,17 @@ config/name="Survival"
 run/main_scene="res://level/Level.tscn"
 config/icon="res://actors/sprites/daddyrunning2.png"
 
+[autoload]
+
+State="*res://State.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/borderless=true
+window/size/fullscreen=true
+
 [input]
 
 alien_grab_object={
@@ -72,6 +83,7 @@ pointing/emulate_mouse_from_touch=false
 2d_physics/layer_1="actors"
 2d_physics/layer_2="throwables"
 2d_physics/layer_3="scenary"
+2d_physics/layer_4="traps"
 
 [physics]
 

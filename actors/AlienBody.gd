@@ -23,4 +23,6 @@ func _process(delta):
 		$Sprite.play("standing")
 
 func hit():
-	pass
+	if $Invulnerability.is_stopped():
+		State.alien_wins = true
+		get_tree().change_scene("res://level/GameOver.tscn")
