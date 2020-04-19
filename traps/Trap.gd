@@ -19,4 +19,7 @@ func mark(enable):
 func _on_Trap_body_entered(body):
 	if active:
 		body.hit()
-		mark(marking)
+
+func activate():
+	active = true
+	mark(marking)

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/garbage_open.png-77a43a9eac77bcc468d65410f86beac1.stex"
+path="res://.import/bolsabasura-object.png-8689d13a31c6111a66d6ec219d4745df.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://throwables/garbage_open.png"
-dest_files=[ "res://.import/garbage_open.png-77a43a9eac77bcc468d65410f86beac1.stex" ]
+source_file="res://throwables/sprites/bolsabasura-object.png"
+dest_files=[ "res://.import/bolsabasura-object.png-8689d13a31c6111a66d6ec219d4745df.stex" ]
 
 [params]
 
