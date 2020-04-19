@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://actors/Carrier.tscn" type="PackedScene" id=1]
 [ext_resource path="res://throwables/GarbageOpen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://level/Background1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://actors/AlienMind.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenary/FireHydrant.tscn" type="PackedScene" id=5]
 [ext_resource path="res://music/Tema1.ogg" type="AudioStream" id=6]
+[ext_resource path="res://throwables/FireHydrantThrowable.tscn" type="PackedScene" id=7]
+[ext_resource path="res://level/Countdown.tscn" type="PackedScene" id=8]
 
 [node name="Level" type="Node2D"]
 
@@ -27,3 +30,11 @@ position = Vector2( 1320, 680 )
 ]]
 stream = ExtResource( 6 )
 autoplay = true
+
+[node name="FireHydrant" parent="." instance=ExtResource( 5 )]
+position = Vector2( 864.911, 583.008 )
+
+[node name="FireHydrantThrowable" parent="." instance=ExtResource( 7 )]
+position = Vector2( 977.496, 624.121 )
+
+[node name="Countdown" parent="." instance=ExtResource( 8 )]

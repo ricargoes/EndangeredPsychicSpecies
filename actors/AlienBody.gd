@@ -24,5 +24,5 @@ func _process(delta):
 
 func hit():
 	if $Invulnerability.is_stopped():
-		State.alien_wins = true
-		get_tree().change_scene("res://level/GameOver.tscn")
+		State.alien_wins()
+		
