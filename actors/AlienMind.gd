@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 var selected_objects = []
 var _throwing_object = null
@@ -12,9 +12,8 @@ func _input(event):
 			_throwing_object = selected_objects.pop_front()
 	elif event.is_action_released("alien_grab_object"):
 		if _throwing_object:
-			var throwing_vector = get_viewport().get_mouse_position() - _throwing_object.get_global_position()
-			var strength = min(throwing_vector.length(), 500)/500.0
-			_throwing_object.impulse(3*throwing_vector)
+			var throwing_vector = get_global_mouse_position() - _throwing_object.get_global_position()
+			_throwing_object.impulse(10*throwing_vector)
 			_throwing_object = null
 			
 

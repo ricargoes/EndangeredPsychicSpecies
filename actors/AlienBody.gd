@@ -8,7 +8,7 @@ func _ready():
 func _process(delta):
 	var destination = null
 	if Input.is_action_pressed("alien_set_destination"):
-		destination = get_viewport().get_mouse_position()
+		destination = get_global_mouse_position()
 		var pos = get_position()
 		var points_to_destination = get_parent().get_node("Navigation").get_simple_path(get_position(), destination)
 		get_parent().get_node("Line2D").points = points_to_destination

@@ -19,10 +19,6 @@ config/name="Survival"
 run/main_scene="res://level/Level.tscn"
 config/icon="res://actors/sprites/daddyrunning2.png"
 
-[autoload]
-
-AlienMind="*res://actors/AlienMind.gd"
-
 [input]
 
 alien_grab_object={

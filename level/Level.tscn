@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://actors/Carrier.tscn" type="PackedScene" id=1]
 [ext_resource path="res://throwables/GarbageOpen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenary/ground_tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://actors/AlienMind.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenary/urban_stuff_tileset.tres" type="TileSet" id=5]
 
 [sub_resource type="NavigationPolygon" id=1]
@@ -39,3 +40,5 @@ default_color = Color( 0.4, 0.501961, 1, 1 )
 
 [node name="GarbageOpen" parent="." instance=ExtResource( 2 )]
 position = Vector2( 280.667, 273.507 )
+
+[node name="AlienMind" parent="." instance=ExtResource( 4 )]

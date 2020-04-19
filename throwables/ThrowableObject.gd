@@ -8,10 +8,10 @@ func _on_ImpulseTime_timeout():
 	set_applied_force(Vector2.ZERO)
 
 func _on_SelectableArea_mouse_entered():
-	AlienMind.select_object(self)
+	get_tree().call_group("alien_mind", "select_object", self)
 
 func _on_SelectableArea_mouse_exited():
-	AlienMind.deselect_object(self)
+	get_tree().call_group("alien_mind", "deselect_object", self)
 
 func _on_ThrowableObject_body_entered(body):
 	if body.is_in_group("actor"):
