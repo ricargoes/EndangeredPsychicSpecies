@@ -8,6 +8,7 @@ func _on_ImpulseTime_timeout():
 	set_applied_force(Vector2.ZERO)
 
 func _on_ThrowableObject_body_entered(body):
+	$Hit.play(0.25)
 	if body.is_in_group("actor"):
 		body.hit()
 

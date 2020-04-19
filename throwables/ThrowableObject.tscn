@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://throwables/ThrowableObject.gd" type="Script" id=1]
+[ext_resource path="res://sfx/hitting.wav" type="AudioStream" id=2]
 
 [sub_resource type="PhysicsMaterial" id=1]
 bounce = 0.2
@@ -29,6 +30,9 @@ shape = SubResource( 2 )
 
 [node name="ImpulseTime" type="Timer" parent="."]
 wait_time = 0.3
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_ThrowableObject_body_entered"]
 [connection signal="sleeping_state_changed" from="." to="." method="_on_ThrowableObject_sleeping_state_changed"]
 [connection signal="input_event" from="SelectableArea" to="." method="_on_SelectableArea_input_event"]

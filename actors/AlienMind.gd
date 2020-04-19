@@ -11,6 +11,9 @@ func _input(event):
 		var throwing_vector = get_global_mouse_position() - _throwing_object.get_global_position()
 		_throwing_object.impulse(10*throwing_vector)
 		_throwing_object = null
+		$Telegrab.stop()
+		$Telethrow.play()
 
 func grab_object(throwable):
 	_throwing_object = throwable
+	$Telegrab.play()

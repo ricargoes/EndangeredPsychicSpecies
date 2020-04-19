@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://actors/sprites/daddyrunning3.png" type="Texture" id=1]
 [ext_resource path="res://actors/Carrier.gd" type="Script" id=2]
@@ -41,6 +41,7 @@
 [ext_resource path="res://actors/sprites/daddydash_3.png" type="Texture" id=39]
 [ext_resource path="res://actors/sprites/daddydash_4.png" type="Texture" id=40]
 [ext_resource path="res://actors/sprites/daddydash_6.png" type="Texture" id=41]
+[ext_resource path="res://sfx/WalkingSound.wav" type="AudioStream" id=42]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -123,4 +124,7 @@ process_material = SubResource( 3 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 1.75, 1.75 )
+
+[node name="Walking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 42 )
 [connection signal="timeout" from="StunCooldown" to="." method="_on_StunCooldown_timeout"]

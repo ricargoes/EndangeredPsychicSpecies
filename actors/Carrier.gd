@@ -32,6 +32,10 @@ func _process(delta):
 		
 		if movement_dir != Vector2.ZERO:
 			set_rotation(movement_dir.angle())
+			if not $Walking.playing:
+				$Walking.play()
+		else:
+			$Walking.stop()
 		move_and_slide(speed, Vector2.ZERO, false, 4, PI/4, false)
 		if movement_dir == Vector2.ZERO:
 			if carrying:
@@ -63,13 +67,22 @@ func grab():
 		if (alien.get_position() - get_position()).length() < 50:
 			alien.queue_free()
 			carrying = true
+			var music = get_tree().get_nodes_in_group("music")[0]
+			music.stream = preload("res://music/Tema1.ogg")
+			music.play()
 
 func hit():
 	stun()
 	if carrying:
-		carrying = false
-		spawn_alien()
-		get_tree().call_group("traps", "mark", true)
+		drop_alien()
+
+func drop_alien():
+	carrying = false
+	spawn_alien()
+	get_tree().call_group("traps", "mark", true)
+	var music = get_tree().get_nodes_in_group("music")[0]
+	music.stream = preload("res://music/Tema2.ogg")
+	music.play()
 
 func stun():
 	$StunCooldown.start()
