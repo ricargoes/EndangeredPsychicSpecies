@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/asfalto2-export.png-4499c0552ae7bbd0be8d185b7553dc8a.stex"
+path="res://.import/detail_texture.png-c7ef073616c062d72df481bf26b311c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenary/sprites/asfalto2-export.png"
-dest_files=[ "res://.import/asfalto2-export.png-4499c0552ae7bbd0be8d185b7553dc8a.stex" ]
+source_file="res://scenary/sprites/detail_texture.png"
+dest_files=[ "res://.import/detail_texture.png-c7ef073616c062d72df481bf26b311c3.stex" ]
 
 [params]
 
