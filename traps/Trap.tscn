@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Trap" type="Area2D"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
