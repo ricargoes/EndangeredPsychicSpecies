@@ -8,7 +8,7 @@
 extents = Vector2( 35, 40 )
 
 [node name="GarbageOpen" instance=ExtResource( 2 )]
-mass = 2.0
+mass = 300.0
 
 [node name="CollisionShape2D" parent="." index="0"]
 visible = false

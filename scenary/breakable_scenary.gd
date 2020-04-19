@@ -5,4 +5,5 @@ func hit():
 	$Fine.hide()
 	$Broken.show()
 	$Broken.play("default")
-	$Trap.active = true
+	if has_node("Trap"):
+		$Trap.active = true
