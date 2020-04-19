@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://throwables/ThrowableObject.tscn" type="PackedScene" id=1]
+[ext_resource path="res://throwables/sprites/bolsabasura-object.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 12.64
+
+[node name="GarbageBag" instance=ExtResource( 1 )]
+mass = 2.0
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource( 1 )
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2( 1, -7 )
+texture = ExtResource( 2 )
