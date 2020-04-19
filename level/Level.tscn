@@ -4,7 +4,7 @@
 [ext_resource path="res://throwables/GarbageOpen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenary/ground_tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://actors/AlienMind.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenary/urban_stuff_tileset.tres" type="TileSet" id=5]
+[ext_resource path="res://scenary/CarRed.tscn" type="PackedScene" id=5]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 240, 400, 1040, 320, 1160, 320, 600, 400, 1440, -480, 1160, 80, 1040, 80, 760, -40, 760, -160, 1440, 1440, 1000, 840, 1040, 640, 1160, 640, 1000, 600, 1040, 400, 240, 1440, 880, 840, 720, 640, 240, 720, 600, 640, 720, 400, 880, 600, 240, 280, 280, -40, 200, -160, -240, -160, -240, -480, 280, -160, 0, 280, 200, -40, -240, 720, -240, -40, 0, 400, 1160, 400 )
@@ -19,13 +19,45 @@ cell_size = Vector2( 40, 40 )
 format = 1
 tile_data = PoolIntArray( -393216, -1073741823, 0, -393210, -1073741822, 0, -393204, -1073741823, 0, -393198, -1073741822, 0, -393192, -1073741823, 0, -393186, -1073741822, 0, -393180, -1073741823, 0, 0, -1073741815, 0, 6, -1073741815, 0, 12, -1073741813, 0, 18, -1073741815, 0, 24, -1073741815, 0, 30, 9, 0, 36, 2, 0, 393216, -1610612733, 0, 393222, -1610612733, 0, 393228, -1073741813, 0, 393234, -1610612731, 0, 393240, -1610612729, 0, 393246, 9, 0, 393252, 1, 0, 786432, -1073741815, 0, 786438, -1073741815, 0, 786444, -1073741813, 0, 786450, -1073741815, 0, 786456, 3, 0, 786462, 9, 0, 786468, 2, 0, 1179648, -1610612736, 0, 1179654, -1610612734, 0, 1179660, -1610612722, 0, 1179666, 9, 0, 1179672, 3, 0, 1179678, 9, 0, 1179684, 1, 0, 1572876, 1610612738, 0, 1572882, 9, 0, 1572888, 3, 0, 1572894, 9, 0, 1572900, 2, 0, 1966092, 1610612737, 0, 1966098, 9, 0, 1966104, 3, 0, 1966110, 9, 0, 1966116, 1, 0, 2359308, 1610612749, 0, 2359314, 9, 0, 2359320, 3, 0, 2359326, 9, 0, 2359332, 2, 0 )
 
-[node name="Stuff" type="TileMap" parent="."]
-tile_set = ExtResource( 5 )
-cell_size = Vector2( 20, 20 )
-format = 1
-tile_data = PoolIntArray( 262144, -1073741824, 0, 262156, -1073741824, 0, 262170, -1073741824, 0, 262183, -1073741824, 0, 1114176, 1610612736, 0, 1703948, -1073741824, 0, 2097193, 0, 0, 2162752, 1610612736, 0, 2752568, 1610612736, 0 )
+[node name="Stuff" type="Node2D" parent="."]
+
+[node name="CarRed" parent="Stuff" instance=ExtResource( 5 )]
+position = Vector2( 904.389, 763.445 )
+
+[node name="CarRed5" parent="Stuff" instance=ExtResource( 5 )]
+position = Vector2( 114.517, 143.88 )
+rotation = 1.5708
+
+[node name="CarRed9" parent="Stuff" instance=ExtResource( 5 )]
+position = Vector2( 325.932, 143.88 )
+rotation = 1.5708
+
+[node name="CarRed6" parent="Stuff" instance=ExtResource( 5 )]
+position = Vector2( 358.232, 581.393 )
+rotation = 1.5708
+
+[node name="CarRed7" parent="Stuff" instance=ExtResource( 5 )]
+position = Vector2( 645.992, 140.944 )
+rotation = 1.5708
+
+[node name="CarRed8" parent="Stuff" instance=ExtResource( 5 )]
+position = Vector2( 877.962, 138.007 )
+rotation = 4.71239
+
+[node name="CarRed2" parent="Stuff" instance=ExtResource( 5 )]
+position = Vector2( 1183.34, 963.115 )
+
+[node name="CarRed3" parent="Stuff" instance=ExtResource( 5 )]
+position = Vector2( 1348.03, 757.779 )
+
+[node name="CarRed4" parent="Stuff" instance=ExtResource( 5 )]
+position = Vector2( 1342.19, 444.148 )
 
 [node name="Navigation" type="Navigation2D" parent="."]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation"]
 position = Vector2( 240, 240 )
