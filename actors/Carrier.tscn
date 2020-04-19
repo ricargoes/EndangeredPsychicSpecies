@@ -30,15 +30,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "standing",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "running",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "standing",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 25 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 23 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
@@ -79,7 +79,7 @@ script = ExtResource( 2 )
 rotation = 1.5708
 frames = SubResource( 1 )
 animation = "standing_watch"
-frame = 1
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -96,4 +96,7 @@ position = Vector2( 5.78955, -2.72449 )
 emitting = false
 amount = 16
 process_material = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
 [connection signal="timeout" from="StunCooldown" to="." method="_on_StunCooldown_timeout"]
