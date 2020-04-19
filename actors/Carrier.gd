@@ -1,47 +1,54 @@
 extends KinematicBody2D
 
 var carrying = true
-var stunned = false
 var max_speed = 150.0
+var dashing_dir = Vector2.RIGHT
 
 func _ready():
 	set_process(true)
 
 func _process(delta):
-	var movement_dir = Vector2.ZERO
-	
-	if not stunned:
-		if Input.is_action_just_pressed("carrier_dash"):
-			try_dashing()
-		if Input.is_action_just_pressed("carrier_grab") and not carrying:
-			grab()
+	if $Dash.is_stopped():
+		var movement_dir = Vector2.ZERO
 		
-		if Input.is_action_pressed("carrier_move_up"):
-			movement_dir += Vector2.UP
-		if Input.is_action_pressed("carrier_move_down"):
-			movement_dir += Vector2.DOWN
-		if Input.is_action_pressed("carrier_move_right"):
-			movement_dir += Vector2.RIGHT
-		if Input.is_action_pressed("carrier_move_left"):
-			movement_dir += Vector2.LEFT
-		
-	var speed = max_speed*movement_dir.normalized()
-	if carrying:
-		speed *= 3/4.0
-	
-	if movement_dir != Vector2.ZERO:
-		set_rotation(movement_dir.angle())
-	move_and_slide(speed, Vector2.ZERO, false, 4, PI/4, false)
-	if movement_dir == Vector2.ZERO:
-		$Sprite.play("standing")
-	else:
+		if $StunCooldown.is_stopped():
+			if Input.is_action_just_pressed("carrier_dash"):
+				try_dashing()
+			if Input.is_action_just_pressed("carrier_grab") and not carrying:
+				grab()
+			
+			if Input.is_action_pressed("carrier_move_up"):
+				movement_dir += Vector2.UP
+			if Input.is_action_pressed("carrier_move_down"):
+				movement_dir += Vector2.DOWN
+			if Input.is_action_pressed("carrier_move_right"):
+				movement_dir += Vector2.RIGHT
+			if Input.is_action_pressed("carrier_move_left"):
+				movement_dir += Vector2.LEFT
+			
+		var speed = max_speed*movement_dir.normalized()
 		if carrying:
-			$Sprite.play("running_alien")
+			speed *= 3/4.0
+		
+		if movement_dir != Vector2.ZERO:
+			set_rotation(movement_dir.angle())
+		move_and_slide(speed, Vector2.ZERO, false, 4, PI/4, false)
+		if movement_dir == Vector2.ZERO:
+			$Sprite.play("standing")
 		else:
-			$Sprite.play("running")
+			if carrying:
+				$Sprite.play("running_alien")
+			else:
+				$Sprite.play("running")
+	else:
+		move_and_slide(dashing_dir*max_speed*2)
+		$Sprite.play("standing_watch")
 
 func try_dashing():
-	pass
+	if $DashCooldown.is_stopped():
+		$Dash.start()
+		$DashCooldown.start()
+		dashing_dir = Vector2(cos(get_rotation()), sin(get_rotation()))
 
 func grab():
 	if carrying:
@@ -63,10 +70,8 @@ func hit():
 func stun():
 	$StunCooldown.start()
 	$HeadStars.emitting = true
-	stunned = true
 
 func _on_StunCooldown_timeout():
-	stunned = false
 	$HeadStars.emitting = false
 
 func spawn_alien():
