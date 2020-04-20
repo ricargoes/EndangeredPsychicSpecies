@@ -7,7 +7,7 @@
 radius = 14.419
 
 [node name="Wheel" instance=ExtResource( 1 )]
-mass = 3.0
+mass = 2.0
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource( 1 )
