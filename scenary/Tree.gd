@@ -1,8 +1,8 @@
 extends StaticBody2D
 
-var possible_sprites = [preload("res://scenary/sprites/árbol.png"), 
-						preload("res://scenary/sprites/árbol2.png"),
-						preload("res://scenary/sprites/árbol3.png")]
+var possible_sprites = [preload("res://scenary/sprites/arbol.png"), 
+						preload("res://scenary/sprites/arbol2.png"),
+						preload("res://scenary/sprites/arbol3.png")]
 
 func _ready():
 	randomize()
