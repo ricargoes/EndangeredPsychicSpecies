@@ -4,3 +4,5 @@ Escape from the city with the last specimen available of an endangered alien spe
 This is a 2 player game. One player plays with the keyboard and the other with the mouse.
 
 Enjoy! :)
+
+Game made for the Ludum Dare 46
