@@ -1,0 +1,137 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenary/rough_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scenary/cracks_path_vertical_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://scenary/roof_autotile.tres" type="TileSet" id=3]
+[ext_resource path="res://scenary/cracks_asfalt_tileset.tres" type="TileSet" id=4]
+[ext_resource path="res://scenary/cracks_path_horizontal_tileset.tres" type="TileSet" id=5]
+[ext_resource path="res://scenary/detail_tileset.tres" type="TileSet" id=6]
+[ext_resource path="res://throwables/Bottle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenary/Tree.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenary/Streetlight.tscn" type="PackedScene" id=9]
+
+[node name="Cell" type="Node2D"]
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 240, 240 )
+format = 1
+tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 65536, 2, 0, 65537, 2, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 393216, 2, 0, 393217, 2, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 458752, 2, 0, 458753, 2, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0 )
+
+[node name="Details" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 40, 40 )
+format = 1
+tile_data = PoolIntArray( 18, 6, 0, 24, 6, 0, 1179648, 2, 0, 1572864, 2, 0, 3080210, 5, 0, 3080216, 5, 0 )
+
+[node name="CracksAsfalt" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 240, 240 )
+format = 1
+
+[node name="CracksPathH" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 240, 120 )
+format = 1
+tile_data = PoolIntArray( 196611, 4, 0, 524290, 4, 0, 524292, 1, 0, 655361, 3, 0 )
+
+[node name="CracksPathV" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 120, 240 )
+format = 1
+tile_data = PoolIntArray( 131074, 0, 0, 196610, 0, 0, 262146, 0, 0 )
+
+[node name="Roof" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 240, 240 )
+format = 1
+tile_data = PoolIntArray( 5, 0, 0, 6, 0, 1, 7, 0, 2, 65541, 0, 131072, 65542, 0, 4, 65543, 0, 65538, 131078, 0, 65536, 131079, 0, 262144, 196614, 0, 65536, 196615, 0, 65538, 262150, 0, 65536, 262151, 0, 65538, 327686, 0, 65536, 327687, 0, 65538, 393221, 0, 0, 393222, 0, 65540, 393223, 0, 65538, 458757, 0, 131072, 458758, 0, 196608, 458759, 0, 131074 )
+
+[node name="Stuff" type="Node2D" parent="."]
+
+[node name="CarTaxi" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 91.0262, 1544.51 )
+
+[node name="CarTaxi2" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 88.0899, 1805.84 )
+
+[node name="CarTaxi3" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 276.015, 1802.91 )
+
+[node name="CarTaxi4" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 378.786, 1614.98 )
+
+[node name="CarTaxi5" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 226.097, 1641.41 )
+
+[node name="CarTaxi10" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 70.4721, 167.371 )
+rotation = 1.85123
+
+[node name="CarTaxi9" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 91.0264, 361.168 )
+rotation = 1.85123
+
+[node name="CarTaxi8" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 331.805, 387.595 )
+rotation = 1.85123
+
+[node name="CarTaxi7" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 387.596, 199.67 )
+rotation = 1.85123
+
+[node name="CarTaxi6" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 220.225, 93.9622 )
+rotation = 1.85123
+
+[node name="CarTaxi11" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 513.858, 672.419 )
+rotation = 1.85123
+
+[node name="CarTaxi12" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 1151.04, 681.228 )
+rotation = 1.85123
+
+[node name="CarTaxi13" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 1156.91, 1253.81 )
+rotation = 1.85123
+
+[node name="CarTaxi14" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 534.412, 1253.81 )
+rotation = 1.85123
+
+[node name="Bottle" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 690.037, 707.655 )
+
+[node name="Bottle2" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 875.026, 751.7 )
+
+[node name="Bottle3" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 698.846, 1242.07 )
+
+[node name="Bottle4" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 775.191, 1321.35 )
+
+[node name="Bottle5" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 628.374, 1347.77 )
+
+[node name="Bottle6" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 604.884, 1156.91 )
+
+[node name="Bottle7" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 801.618, 1209.77 )
+
+[node name="Streetlight" parent="Stuff" instance=ExtResource( 9 )]
+position = Vector2( 851.535, 925.625 )
+
+[node name="Streetlight2" parent="Stuff" instance=ExtResource( 9 )]
+position = Vector2( 1336.03, 564.457 )
+
+[node name="Streetlight3" parent="Stuff" instance=ExtResource( 9 )]
+position = Vector2( 1353.65, 1357.27 )
+
+[node name="Streetlight4" parent="Stuff" instance=ExtResource( 9 )]
+position = Vector2( 176.18, 1342.58 )
+
+[node name="Streetlight5" parent="Stuff" instance=ExtResource( 9 )]
+position = Vector2( 184.989, 564.457 )
