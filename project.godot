@@ -15,9 +15,10 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Survival"
+config/name="EPS - Endangered Psychic Species"
 run/main_scene="res://level/Welcome.tscn"
-config/icon="res://actors/sprites/daddyrunning2.png"
+boot_splash/image="res://logo.png"
+config/icon="res://logo.png"
 
 [autoload]
 
