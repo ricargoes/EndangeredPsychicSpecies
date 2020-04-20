@@ -33,14 +33,14 @@ __meta__ = {
 }
 
 [node name="Title" type="TextureRect" parent="VBoxContainer"]
-margin_top = 429.0
+margin_top = 412.0
 margin_right = 960.0
-margin_bottom = 429.0
+margin_bottom = 412.0
 
 [node name="Descrption" type="TextEdit" parent="VBoxContainer"]
-margin_top = 433.0
+margin_top = 416.0
 margin_right = 960.0
-margin_bottom = 553.0
+margin_bottom = 536.0
 rect_min_size = Vector2( 300, 120 )
 text = "Richard! You have been chosen for a critical mission for the EPS. A volcan eruption is threatening the life of one the last psychic aliens. Your mission is to retrieve the subject and extract it. You will have a helicopter waiting for you.
 
@@ -54,17 +54,19 @@ selecting_enabled = false
 wrap_enabled = true
 
 [node name="Picture" type="TextureRect" parent="VBoxContainer"]
-margin_top = 557.0
+margin_top = 540.0
 margin_right = 960.0
-margin_bottom = 632.0
+margin_bottom = 615.0
 texture = ExtResource( 1 )
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 636.0
+margin_top = 619.0
 margin_right = 960.0
-margin_bottom = 650.0
-text = "Press ENTER  to start"
+margin_bottom = 667.0
+text = "Press ENTER  to start on standard city
+
+Press LEFT MOUSE to start Procedurally generated city"
 align = 1
 
 [node name="AlienControls" type="VBoxContainer" parent="."]

@@ -17,6 +17,7 @@
 [node name="CellMap" parent="Navigation" instance=ExtResource( 1 )]
 n_cells = Vector2( 6, 6 )
 cells_size = Vector2( 1920, 1920 )
+shortcuts_amount = 0.6
 open_cells = [ [ Vector2( 0, 0 ), Vector2( -1, 0 ) ], [ Vector2( 5, 3 ), Vector2( 1, 0 ) ] ]
 
 [node name="StartingPoint" parent="Navigation" instance=ExtResource( 6 )]
