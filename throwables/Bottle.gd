@@ -4,6 +4,7 @@ var possible_sprites = [preload("res://throwables/sprites/botellaverde.png"), pr
 
 func _ready():
 	randomize()
+	set_rotation(randi() % 360)
 	$Sprite.texture = possible_sprites[randi() % possible_sprites.size()]
 	$Hit.stream = preload("res://sfx/breaking glass.wav")
 

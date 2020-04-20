@@ -22,6 +22,7 @@ config/icon="res://actors/sprites/daddyrunning2.png"
 [autoload]
 
 State="*res://State.gd"
+ResourceManager="*res://ResourceManager.gd"
 
 [display]
 

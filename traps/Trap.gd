@@ -17,7 +17,7 @@ func mark(enable):
 		$Marker.self_modulate = color_mark_disable
 
 func _on_Trap_body_entered(body):
-	if active:
+	if active and body.has_method("hit"):
 		body.hit()
 
 func activate():
