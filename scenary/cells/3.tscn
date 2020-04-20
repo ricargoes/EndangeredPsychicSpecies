@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenary/rough_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenary/cracks_path_vertical_tileset.tres" type="TileSet" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://scenary/Streetlight.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenary/CarRed.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenary/FireHydrant.tscn" type="PackedScene" id=14]
+[ext_resource path="res://throwables/FallenTree.tscn" type="PackedScene" id=15]
 
 [node name="Cell" type="Node2D"]
 
@@ -115,3 +116,15 @@ broken = true
 position = Vector2( 442.074, 728.978 )
 rotation = 2.35619
 broken = true
+
+[node name="FallenTree" parent="Stuff" instance=ExtResource( 15 )]
+position = Vector2( 1771.34, 1274.81 )
+rotation = 0.785397
+
+[node name="FallenTree2" parent="Stuff" instance=ExtResource( 15 )]
+position = Vector2( 1472.86, 1790.87 )
+rotation = 0.523598
+
+[node name="FallenTree3" parent="Stuff" instance=ExtResource( 15 )]
+position = Vector2( 1037.7, 1802.02 )
+rotation = 2.61799

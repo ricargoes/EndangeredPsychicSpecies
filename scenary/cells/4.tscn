@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenary/rough_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenary/cracks_path_vertical_tileset.tres" type="TileSet" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://throwables/GarbageOpen.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenary/CarTaxi.tscn" type="PackedScene" id=12]
 [ext_resource path="res://throwables/GarbageBag.tscn" type="PackedScene" id=13]
+[ext_resource path="res://throwables/FallenTree.tscn" type="PackedScene" id=14]
 
 [node name="Cell" type="Node2D"]
 
@@ -60,6 +61,9 @@ position = Vector2( 628.374, 117.453 )
 [node name="Tree2" parent="Stuff" instance=ExtResource( 7 )]
 position = Vector2( 960.179, 126.262 )
 
+[node name="Tree8" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 1145.68, 128.912 )
+
 [node name="Tree3" parent="Stuff" instance=ExtResource( 7 )]
 position = Vector2( 1333.09, 129.198 )
 
@@ -67,7 +71,7 @@ position = Vector2( 1333.09, 129.198 )
 position = Vector2( 1697.2, 126.262 )
 
 [node name="Tree5" parent="Stuff" instance=ExtResource( 7 )]
-position = Vector2( 1811.71, 308.314 )
+position = Vector2( 1801.11, 265.914 )
 
 [node name="Tree6" parent="Stuff" instance=ExtResource( 7 )]
 position = Vector2( 1791.16, 590.202 )
@@ -110,3 +114,15 @@ rotation = 1.5977
 
 [node name="GarbageBag" parent="Stuff" instance=ExtResource( 13 )]
 position = Vector2( 1422.65, 1534.23 )
+
+[node name="FallenTree" parent="Stuff" instance=ExtResource( 14 )]
+position = Vector2( 784.409, 180.202 )
+rotation = -1.309
+
+[node name="FallenTree2" parent="Stuff" instance=ExtResource( 14 )]
+position = Vector2( 1478.72, 185.502 )
+rotation = -0.785397
+
+[node name="FallenTree3" parent="Stuff" instance=ExtResource( 14 )]
+position = Vector2( 1743.72, 392.205 )
+rotation = 0.523598
