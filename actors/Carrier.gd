@@ -71,8 +71,7 @@ func grab():
 			alien.queue_free()
 			carrying = true
 			var music = get_tree().get_nodes_in_group("music")[0]
-			music.stream = preload("res://music/Tema1.ogg")
-			music.play()
+			music.play_normal_theme()
 
 func hit():
 	stun()
@@ -84,8 +83,7 @@ func drop_alien():
 	spawn_alien()
 	get_tree().call_group("traps", "mark", true)
 	var music = get_tree().get_nodes_in_group("music")[0]
-	music.stream = preload("res://music/Tema2.ogg")
-	music.play()
+	music.play_freedom()
 
 func stun():
 	$StunCooldown.start()
