@@ -55,10 +55,12 @@ rotation = 1.57943
 [node name="Streetlight2" parent="Stuff" instance=ExtResource( 8 )]
 position = Vector2( 1220.86, 323.837 )
 rotation = -1.60589
+broken = true
 
 [node name="Streetlight4" parent="Stuff" instance=ExtResource( 8 )]
 position = Vector2( 695.463, 947.261 )
 rotation = 1.57943
+broken = true
 
 [node name="Streetlight3" parent="Stuff" instance=ExtResource( 8 )]
 position = Vector2( 1214.67, 945.102 )
@@ -67,6 +69,7 @@ rotation = -1.60589
 [node name="Streetlight6" parent="Stuff" instance=ExtResource( 8 )]
 position = Vector2( 695.463, 1602.53 )
 rotation = 1.57943
+broken = true
 
 [node name="Streetlight5" parent="Stuff" instance=ExtResource( 8 )]
 position = Vector2( 1214.67, 1600.37 )

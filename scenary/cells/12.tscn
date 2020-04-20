@@ -58,6 +58,7 @@ broken = true
 [node name="Streetlight2" parent="Stuff" instance=ExtResource( 10 )]
 position = Vector2( 746.288, 525.834 )
 rotation = 2.35619
+broken = true
 
 [node name="Streetlight4" parent="Stuff" instance=ExtResource( 10 )]
 position = Vector2( 1681.86, 1210.88 )
