@@ -50,21 +50,6 @@ animations = [ {
 "name": "standing",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "running",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 25 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 23 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "standing_watch",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 33 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 28 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 31 ) ],
-"loop": true,
-"name": "standing_alien",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "running_alien",
@@ -74,6 +59,21 @@ animations = [ {
 "loop": true,
 "name": "dashing",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "running",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 28 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "standing_alien",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 23 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "standing_watch",
+"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -92,6 +92,7 @@ color = Color( 0.980392, 0.929412, 0.211765, 1 )
 [node name="Carrier" type="KinematicBody2D" groups=[
 "actor",
 ]]
+z_index = 10
 collision_mask = 14
 script = ExtResource( 2 )
 

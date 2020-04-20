@@ -20,6 +20,8 @@ radius = 16.0543
 
 [node name="FireHydrant" type="StaticBody2D"]
 scale = Vector2( 1.5, 1.5 )
+collision_layer = 4
+collision_mask = 3
 script = ExtResource( 1 )
 
 [node name="Broken" type="AnimatedSprite" parent="."]
