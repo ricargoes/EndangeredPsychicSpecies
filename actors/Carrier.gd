@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var carrying = true
-var max_speed = 150.0
+var max_speed = 300.0
 var dashing_dir = Vector2.RIGHT
 
 func _ready():
