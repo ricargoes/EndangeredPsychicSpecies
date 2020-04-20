@@ -15,7 +15,9 @@ func _input(event):
 		_throwing_object = null
 		$Telegrab.stop()
 		$Telethrow.play()
+		$TelekinesisCooldown.start()
 
 func grab_object(throwable):
-	_throwing_object = throwable
-	$Telegrab.play()
+	if $TelekinesisCooldown.is_stopped():
+		_throwing_object = throwable
+		$Telegrab.play()
