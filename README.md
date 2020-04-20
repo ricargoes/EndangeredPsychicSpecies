@@ -5,7 +5,7 @@ This is a 2 player game. One player plays with the keyboard and the other with t
 
 Enjoy! :)
 
-Game made for the Ludum Dare 46
+Game created for the Ludum Dare 46 using Godot game engine (https://godotengine.org/)
 
 ## The team
 
