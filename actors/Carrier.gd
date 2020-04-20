@@ -49,7 +49,10 @@ func _process(delta):
 				$Sprite.play("running")
 	else:
 		move_and_slide(dashing_dir*max_speed*2)
-		$Sprite.play("dashing")
+		if carrying:
+			$Sprite.play("dashing_alien")
+		else:
+			$Sprite.play("dashing")
 
 func try_dashing():
 	if $DashCooldown.is_stopped():

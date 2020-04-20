@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://actors/sprites/daddyrunning3.png" type="Texture" id=1]
 [ext_resource path="res://actors/Carrier.gd" type="Script" id=2]
@@ -42,6 +42,12 @@
 [ext_resource path="res://actors/sprites/daddydash_4.png" type="Texture" id=40]
 [ext_resource path="res://actors/sprites/daddydash_6.png" type="Texture" id=41]
 [ext_resource path="res://sfx/WalkingSound.wav" type="AudioStream" id=42]
+[ext_resource path="res://actors/sprites/daddycreaturedash_4.png" type="Texture" id=43]
+[ext_resource path="res://actors/sprites/daddycreaturedash_5.png" type="Texture" id=44]
+[ext_resource path="res://actors/sprites/daddycreaturedash_3.png" type="Texture" id=45]
+[ext_resource path="res://actors/sprites/daddycreaturedash_6.png" type="Texture" id=46]
+[ext_resource path="res://actors/sprites/daddycreaturedash_2.png" type="Texture" id=47]
+[ext_resource path="res://actors/sprites/daddycreaturedash_1.png" type="Texture" id=48]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -74,6 +80,11 @@ animations = [ {
 "loop": true,
 "name": "standing_watch",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 48 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "dashing_alien",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -99,7 +110,7 @@ script = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 rotation = 1.5708
 frames = SubResource( 1 )
-animation = "dashing"
+animation = "dashing_alien"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
