@@ -14,7 +14,8 @@
 [ext_resource path="res://scenary/CarRed.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenary/Streetlight.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenary/FireHydrant.tscn" type="PackedScene" id=14]
-[ext_resource path="res://throwables/FallenTree.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenary/FallenTree.tscn" type="PackedScene" id=15]
+
 
 [node name="Cell" type="Node2D"]
 
