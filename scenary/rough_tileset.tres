@@ -3,11 +3,11 @@
 [ext_resource path="res://scenary/sprites/rough_texture.png" type="Texture" id=1]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 240, 240, 0, 240, 0, 0, 240, 0 )
+vertices = PoolVector2Array( 0, 0, 240, 0, 240, 240, 0, 240 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=2]
-vertices = PoolVector2Array( 240, 240, 0, 240, 0, 0, 240, 0 )
+vertices = PoolVector2Array( 1.52588e-05, 0, 240, 0, 240, 240, 1.52588e-05, 240 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [resource]
