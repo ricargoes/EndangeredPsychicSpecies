@@ -97,28 +97,32 @@ position = Vector2( 1574, 504.537 )
 rotation = -1.40692
 
 [node name="Streetlight" parent="Stuff" instance=ExtResource( 15 )]
-position = Vector2( 660.379, 624.951 )
+position = Vector2( 661.153, 701.653 )
+rotation = 3.10072
 
 [node name="Streetlight2" parent="Stuff" instance=ExtResource( 15 )]
-position = Vector2( 169.478, 626.898 )
+position = Vector2( 140, 701.738 )
+rotation = 3.10072
 
 [node name="Streetlight3" parent="Stuff" instance=ExtResource( 15 )]
-position = Vector2( 1275.95, 619.106 )
+position = Vector2( 1272.92, 700 )
+rotation = 3.10072
 
 [node name="Streetlight4" parent="Stuff" instance=ExtResource( 15 )]
-position = Vector2( 1679.19, 613.262 )
+position = Vector2( 1694.72, 700 )
+rotation = 3.10072
 
 [node name="Streetlight8" parent="Stuff" instance=ExtResource( 15 )]
-position = Vector2( 650.639, 1238.58 )
+position = Vector2( 700, 1200 )
 
 [node name="Streetlight7" parent="Stuff" instance=ExtResource( 15 )]
-position = Vector2( 159.738, 1240.52 )
+position = Vector2( 169.478, 1200 )
 
 [node name="Streetlight6" parent="Stuff" instance=ExtResource( 15 )]
-position = Vector2( 1274, 1236.63 )
+position = Vector2( 1280, 1200 )
 
 [node name="Streetlight5" parent="Stuff" instance=ExtResource( 15 )]
-position = Vector2( 1669.45, 1226.89 )
+position = Vector2( 1669.45, 1205 )
 
 [node name="Streetlight9" parent="Stuff" instance=ExtResource( 15 )]
 position = Vector2( 658.431, 213.918 )

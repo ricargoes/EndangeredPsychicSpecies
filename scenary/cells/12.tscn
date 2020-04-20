@@ -51,17 +51,21 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 1, 3, 0, 1, 4, 0, 196609, 5, 0
 [node name="Stuff" type="Node2D" parent="."]
 
 [node name="Streetlight" parent="Stuff" instance=ExtResource( 10 )]
-position = Vector2( 1043.57, 1272.43 )
+position = Vector2( 927.012, 1272.43 )
+rotation = 1.57079
 broken = true
 
 [node name="Streetlight2" parent="Stuff" instance=ExtResource( 10 )]
-position = Vector2( 1054.95, 502.091 )
+position = Vector2( 746.288, 525.834 )
+rotation = 2.35619
 
 [node name="Streetlight4" parent="Stuff" instance=ExtResource( 10 )]
-position = Vector2( 1612.79, 1264.84 )
+position = Vector2( 1681.86, 1210.88 )
+rotation = 3.14159
 
 [node name="Streetlight3" parent="Stuff" instance=ExtResource( 10 )]
-position = Vector2( 1627.97, 505.886 )
+position = Vector2( 1774.75, 691.515 )
+rotation = -3.14159
 broken = true
 
 [node name="GarbageOpen" parent="Stuff" instance=ExtResource( 9 )]

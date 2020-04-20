@@ -11,7 +11,6 @@
 [ext_resource path="res://throwables/Bottle.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenary/FallenTree.tscn" type="PackedScene" id=10]
 
-
 [node name="Cell" type="Node2D"]
 
 [node name="Ground" type="TileMap" parent="."]
@@ -67,7 +66,7 @@ position = Vector2( 1330.16, 616.629 )
 position = Vector2( 1338.97, 1256.75 )
 
 [node name="Tree9" parent="Stuff" instance=ExtResource( 7 )]
-position = Vector2( 930.816, 325.932 )
+position = Vector2( 940, 460 )
 
 [node name="Tree10" parent="Stuff" instance=ExtResource( 7 )]
 position = Vector2( 930.816, 951.37 )
@@ -76,17 +75,20 @@ position = Vector2( 930.816, 951.37 )
 position = Vector2( 1811.71, 1817.59 )
 
 [node name="Streetlight" parent="Stuff" instance=ExtResource( 8 )]
-position = Vector2( 1653.15, 952.052 )
+position = Vector2( 1640, 960 )
+rotation = 1.56173
 
 [node name="Streetlight2" parent="Stuff" instance=ExtResource( 8 )]
-position = Vector2( 290.696, 949.116 )
+position = Vector2( 280, 961.998 )
+rotation = -1.58918
 broken = true
 
 [node name="Streetlight3" parent="Stuff" instance=ExtResource( 8 )]
-position = Vector2( 930.816, 449.94 )
+position = Vector2( 950.2, 325 )
 
 [node name="Streetlight4" parent="Stuff" instance=ExtResource( 8 )]
-position = Vector2( 933.752, 1445.35 )
+position = Vector2( 930.816, 1460 )
+rotation = -3.12147
 
 [node name="Bottle" parent="Stuff" instance=ExtResource( 9 )]
 position = Vector2( 804.554, 883.835 )
@@ -125,7 +127,7 @@ position = Vector2( 810.427, 798.682 )
 position = Vector2( 742.891, 922.007 )
 
 [node name="FallenTree" parent="Stuff" instance=ExtResource( 10 )]
-position = Vector2( 479.471, 565.992 )
+position = Vector2( 520, 580 )
 rotation = 2.35619
 
 [node name="FallenTree2" parent="Stuff" instance=ExtResource( 10 )]

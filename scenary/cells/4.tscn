@@ -15,7 +15,6 @@
 [ext_resource path="res://throwables/GarbageBag.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenary/FallenTree.tscn" type="PackedScene" id=14]
 
-
 [node name="Cell" type="Node2D"]
 
 [node name="Ground" type="TileMap" parent="."]
@@ -28,7 +27,7 @@ tile_data = PoolIntArray( 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 2, 0, 
 tile_set = ExtResource( 6 )
 cell_size = Vector2( 40, 40 )
 format = 1
-tile_data = PoolIntArray( 1114112, -2147483647, 0, 1114118, -2147483647, 0, 1114124, 1073741836, 0, 1179660, 536870913, 0, 1179689, 1, 0, 1507329, 10, 0, 1507332, 10, 0, 1507335, 10, 0, 1507340, -1073741822, 0, 1507363, -1073741822, 0, 1507373, 10, 0, 2949143, -1610612726, 0 )
+tile_data = PoolIntArray( 1114112, -2147483647, 0, 1114118, -2147483647, 0, 1114124, 1073741836, 0, 1179660, 536870913, 0, 1179689, 1, 0, 1507329, 10, 0, 1507332, 10, 0, 1507335, 10, 0, 1507340, -1610612724, 0, 1507341, -1610612735, 0, 1507363, -1073741822, 0, 1507369, 12, 0, 1507373, 10, 0, 1966116, 6, 0, 2031652, 4, 0, 2949143, -1610612726, 0 )
 
 [node name="CracksAsfalt" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
@@ -87,16 +86,23 @@ position = Vector2( 836.854, 1149.28 )
 position = Vector2( 926.118, 1154.86 )
 
 [node name="Streetlight" parent="Stuff" instance=ExtResource( 9 )]
-position = Vector2( 669.483, 1383.55 )
+position = Vector2( 723.898, 1190.38 )
 
 [node name="Streetlight2" parent="Stuff" instance=ExtResource( 9 )]
-position = Vector2( 1573.28, 331.899 )
+position = Vector2( 1541.63, 356.016 )
+rotation = -2.35619
 
 [node name="Streetlight3" parent="Stuff" instance=ExtResource( 9 )]
-position = Vector2( 680.641, 323.531 )
+position = Vector2( 593.215, 340.112 )
+rotation = -3.14159
+
+[node name="Streetlight5" parent="Stuff" instance=ExtResource( 9 )]
+position = Vector2( 198.806, 675.623 )
+rotation = -3.14159
 
 [node name="Streetlight4" parent="Stuff" instance=ExtResource( 9 )]
-position = Vector2( 1590.02, 1338.91 )
+position = Vector2( 1448.07, 1200.89 )
+rotation = -0.785397
 
 [node name="Manhole" parent="Stuff" instance=ExtResource( 10 )]
 position = Vector2( 309.636, 845.222 )

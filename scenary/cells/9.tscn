@@ -18,7 +18,7 @@
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 240, 240 )
 format = 1
-tile_data = PoolIntArray( 3, -1610612736, 0, 4, -1610612736, 0, 65539, 1610612736, 0, 65540, 1610612736, 0, 131074, 1, 0, 131075, 1610612736, 0, 131076, 1610612736, 0, 131077, 1, 0, 131078, 1, 0, 131079, 2, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, -1610612736, 0, 196614, -1610612736, 0, 196615, -1610612736, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, -1610612736, 0, 262150, -1610612736, 0, 262151, -1610612736, 0, 327682, 1, 0, 327683, 0, 0, 327684, 0, 0, 327685, 1, 0, 327686, 1610612737, 0, 327687, 1610612737, 0 )
+tile_data = PoolIntArray( 3, -1610612736, 0, 4, -1610612736, 0, 65539, 1610612736, 0, 65540, 1610612736, 0, 131074, 1, 0, 131075, 1610612736, 0, 131076, 1610612736, 0, 131077, 1, 0, 131078, 1, 0, 131079, 2, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, -1610612736, 0, 196614, -1610612736, 0, 196615, -1610612736, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, -1610612736, 0, 262150, -1610612736, 0, 262151, -1610612736, 0, 327682, 1, 0, 327683, 0, 0, 327684, 0, 0, 327685, 1610612737, 0, 327686, 1610612737, 0, 327687, 1610612737, 0 )
 
 [node name="Details" type="TileMap" parent="."]
 tile_set = ExtResource( 6 )
@@ -56,16 +56,19 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 131076, 5, 0, 0, 6, 0, 1, 7, 0
 position = Vector2( 1799.24, 608.114 )
 
 [node name="Streetlight" parent="Stuff" instance=ExtResource( 8 )]
-position = Vector2( 635.556, 534.496 )
+position = Vector2( 705.685, 536.444 )
+rotation = 1.57079
 
 [node name="Streetlight2" parent="Stuff" instance=ExtResource( 8 )]
-position = Vector2( 627.641, 1294.28 )
+position = Vector2( 711.406, 1198.83 )
+rotation = 0.785397
 
 [node name="Streetlight3" parent="Stuff" instance=ExtResource( 8 )]
-position = Vector2( 1444.97, 655.484 )
+position = Vector2( 1448.87, 715.873 )
+rotation = 3.14159
 
 [node name="Streetlight4" parent="Stuff" instance=ExtResource( 8 )]
-position = Vector2( 1545.39, 1252.44 )
+position = Vector2( 1456.7, 1190.72 )
 
 [node name="FireHydrant" parent="Stuff" instance=ExtResource( 10 )]
 position = Vector2( 1247.67, 1256.31 )

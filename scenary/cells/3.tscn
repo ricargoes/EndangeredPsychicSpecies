@@ -16,7 +16,6 @@
 [ext_resource path="res://scenary/FireHydrant.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenary/FallenTree.tscn" type="PackedScene" id=15]
 
-
 [node name="Cell" type="Node2D"]
 
 [node name="Ground" type="TileMap" parent="."]
@@ -29,7 +28,7 @@ tile_data = PoolIntArray( 2, 1, 0, 3, 0, 0, 4, 0, 0, 5, 1, 0, 65538, 1, 0, 65539
 tile_set = ExtResource( 6 )
 cell_size = Vector2( 40, 40 )
 format = 1
-tile_data = PoolIntArray( 65559, -1610612726, 0, 262167, -1610612726, 0, 458775, -1610612726, 0, 655378, 11, 0, 655384, 11, 0, 1114135, -1610612726, 0, 1310742, -1610612726, 0, 1507328, 10, 0, 1507331, 10, 0, 1507334, 10, 0, 1507337, 10, 0, 1507340, 10, 0, 1507343, 10, 0, 1507346, 10, 0, 1507349, 9, 0 )
+tile_data = PoolIntArray( 17, 1, 0, 30, 2, 0, 65559, -1610612726, 0, 262167, -1610612726, 0, 393233, 1, 0, 393246, 2, 0, 458775, -1610612726, 0, 655378, 11, 0, 655384, 11, 0, 786449, 1, 0, 786462, 4, 0, 1114112, 5, 0, 1114118, 7, 0, 1114124, 5, 0, 1114135, -1610612726, 0, 1179678, 2, 0, 1310742, -1610612726, 0, 1507328, 10, 0, 1507331, 10, 0, 1507334, 10, 0, 1507337, 10, 0, 1507340, 10, 0, 1507343, 10, 0, 1507346, 10, 0, 1507349, 9, 0, 1966098, 6, 0 )
 
 [node name="CracksAsfalt" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
@@ -95,13 +94,20 @@ position = Vector2( 692.983, 563.474 )
 position = Vector2( 820.716, 684.769 )
 
 [node name="Streetlight" parent="Stuff" instance=ExtResource( 12 )]
-position = Vector2( 216.508, 640.559 )
+position = Vector2( 216.508, 702.559 )
+rotation = 3.12972
+
+[node name="Streetlight4" parent="Stuff" instance=ExtResource( 12 )]
+position = Vector2( 721.954, 242.668 )
+rotation = 1.58816
 
 [node name="Streetlight3" parent="Stuff" instance=ExtResource( 12 )]
-position = Vector2( 1266.32, 640.559 )
+position = Vector2( 1199.45, 684.769 )
+rotation = -1.6245
 
 [node name="Streetlight2" parent="Stuff" instance=ExtResource( 12 )]
-position = Vector2( 1603.67, 1587.15 )
+position = Vector2( 1584.2, 1593.29 )
+rotation = -0.852462
 broken = true
 
 [node name="CarRed3" parent="Stuff" instance=ExtResource( 13 )]

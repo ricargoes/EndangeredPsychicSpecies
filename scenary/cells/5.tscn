@@ -16,7 +16,6 @@
 [ext_resource path="res://scenary/FireHydrant.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenary/FallenTree.tscn" type="PackedScene" id=15]
 
-
 [node name="Cell" type="Node2D"]
 
 [node name="Ground" type="TileMap" parent="."]
@@ -115,17 +114,29 @@ position = Vector2( 725.893, 752.55 )
 rotation = -1.57079
 
 [node name="Streetlight" parent="Stuff" instance=ExtResource( 13 )]
-position = Vector2( 932.459, 1345.84 )
+position = Vector2( 936, 1240 )
+
+[node name="Streetlight5" parent="Stuff" instance=ExtResource( 13 )]
+position = Vector2( 334.977, 1240 )
+
+[node name="Streetlight4" parent="Stuff" instance=ExtResource( 13 )]
+position = Vector2( 1672, 1240 )
 
 [node name="Streetlight2" parent="Stuff" instance=ExtResource( 13 )]
-position = Vector2( 345.355, 605.481 )
+position = Vector2( 334.977, 683.765 )
+rotation = 3.14159
+
+[node name="Streetlight6" parent="Stuff" instance=ExtResource( 13 )]
+position = Vector2( 936, 683.765 )
+rotation = 3.14159
 
 [node name="Streetlight3" parent="Stuff" instance=ExtResource( 13 )]
-position = Vector2( 1519.56, 611.957 )
+position = Vector2( 1662.2, 683.765 )
+rotation = 3.14159
 broken = true
 
 [node name="FireHydrant" parent="Stuff" instance=ExtResource( 14 )]
-position = Vector2( 920.539, 655.535 )
+position = Vector2( 424.608, 655.535 )
 
 [node name="FireHydrant2" parent="Stuff" instance=ExtResource( 14 )]
 position = Vector2( 1591.82, 1251.27 )
