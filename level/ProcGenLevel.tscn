@@ -14,16 +14,16 @@
 n_cells = Vector2( 6, 6 )
 cells_size = Vector2( 1920, 1920 )
 shortcuts_amount = 0.6
-open_cells = [ [ Vector2( 0, 0 ), Vector2( -1, 0 ) ], [ Vector2( 5, 3 ), Vector2( 1, 0 ) ] ]
+open_cells = [ [ Vector2( 0, 3 ), Vector2( -1, 0 ) ], [ Vector2( 5, 3 ), Vector2( 1, 0 ) ] ]
 
 [node name="StartingPoint" parent="." instance=ExtResource( 6 )]
-position = Vector2( -1920, 0 )
+position = Vector2( -1920, 5760 )
 
 [node name="EndPoint" parent="." instance=ExtResource( 7 )]
 position = Vector2( 11520, 5760 )
 
 [node name="Carrier" parent="." instance=ExtResource( 3 )]
-position = Vector2( -842.443, 982.851 )
+position = Vector2( -985.402, 6766.22 )
 
 [node name="AlienMind" parent="." instance=ExtResource( 2 )]
 telekinesis_strength = 8
