@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenary/rough_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scenary/cracks_path_vertical_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://scenary/roof_autotile.tres" type="TileSet" id=3]
+[ext_resource path="res://scenary/cracks_asfalt_tileset.tres" type="TileSet" id=4]
+[ext_resource path="res://scenary/cracks_path_horizontal_tileset.tres" type="TileSet" id=5]
+[ext_resource path="res://scenary/detail_tileset.tres" type="TileSet" id=6]
+[ext_resource path="res://traps/Manhole.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenary/Helicopter.tscn" type="PackedScene" id=8]
+
+[node name="EndPoint" type="Node2D"]
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 240, 240 )
+format = 1
+tile_data = PoolIntArray( 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 196608, -1610612736, 0, 196609, -1610612736, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 262144, -1610612736, 0, 262145, -1610612736, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0 )
+
+[node name="Details" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 40, 40 )
+format = 1
+tile_data = PoolIntArray( 983059, -1610612726, 0, 983069, -1610612726, 0, 1048595, -1610612726, 0, 1048605, -1610612726, 0, 1114131, -1610612726, 0, 1114141, -1610612726, 0, 1179667, -1610612726, 0, 1179677, -1610612726, 0, 1245203, -1073741814, 0, 1245213, -1073741814, 0, 1310739, -1073741814, 0, 1310749, -1073741814, 0, 1376275, -1073741814, 0, 1376285, -1073741814, 0, 1441811, -1073741814, 0, 1441821, -1073741814, 0, 1507329, 1610612746, 0, 1507332, 1610612746, 0, 1507335, 1610612746, 0, 1507338, 1610612746, 0, 1507347, -1073741814, 0, 1507357, -1073741814, 0, 1572883, -1073741814, 0, 1572884, 10, 0, 1572885, 10, 0, 1572886, 10, 0, 1572887, 10, 0, 1572888, 10, 0, 1572889, 10, 0, 1572890, 10, 0, 1572891, 10, 0, 1572892, 10, 0, 1572893, -1073741814, 0, 1638419, -1073741814, 0, 1638429, -1073741814, 0, 1703955, -1073741814, 0, 1703965, -1073741814, 0, 1769491, -1073741814, 0, 1769501, -1073741814, 0, 1835027, -1073741814, 0, 1835037, -1073741814, 0, 1900563, -1610612726, 0, 1900573, -1610612726, 0, 1966099, -1610612726, 0, 1966109, -1610612726, 0, 2031635, -1610612726, 0, 2031645, -1610612726, 0, 2097171, -1610612726, 0, 2097181, -1610612726, 0 )
+
+[node name="CracksAsfalt" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 240, 240 )
+format = 1
+tile_data = PoolIntArray( 131074, -1610612736, 0, 131075, -1610612729, 0, 131076, -1610612726, 0, 131077, -1610612725, 0, 196608, 1610612744, 0, 196609, 1610612737, 0, 196610, -1610612734, 0, 196611, -1610612726, 0, 196612, -1610612727, 0, 196613, -1610612728, 0, 262144, 1610612741, 0, 262145, 1610612743, 0, 262146, -1610612731, 0, 262147, -1610612729, 0, 262148, -1610612736, 0, 262149, -1610612726, 0, 327682, -1610612723, 0, 327683, -1610612732, 0, 327684, -1610612731, 0, 327685, -1610612725, 0 )
+
+[node name="CracksPathH" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 240, 120 )
+format = 1
+
+[node name="CracksPathV" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 120, 240 )
+format = 1
+
+[node name="Roof" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 240, 240 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 1, 3, 0, 196609, 4, 0, 1, 5, 0, 1, 6, 0, 1, 7, 0, 2, 65536, 0, 65536, 65537, 0, 3, 65538, 0, 131073, 65539, 0, 131073, 65540, 0, 131073, 65541, 0, 131073, 65542, 0, 4, 65543, 0, 65538, 131072, 0, 131072, 131073, 0, 131074, 131078, 0, 65536, 131079, 0, 65538, 196614, 0, 65536, 196615, 0, 65538, 262150, 0, 196610, 262151, 0, 65538, 327680, 0, 0, 327681, 0, 2, 327686, 0, 65536, 327687, 0, 65538, 393216, 0, 65536, 393217, 0, 65539, 393218, 0, 1, 393219, 0, 196609, 393220, 0, 1, 393221, 0, 1, 393222, 0, 65540, 393223, 0, 65538, 458752, 0, 196611, 458753, 0, 131073, 458754, 0, 131073, 458755, 0, 131073, 458756, 0, 131073, 458757, 0, 131073, 458758, 0, 131073, 458759, 0, 131074 )
+
+[node name="Stuff" type="Node2D" parent="."]
+
+[node name="Manhole" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 578.79, 578.79 )
+
+[node name="Manhole2" parent="Stuff" instance=ExtResource( 7 )]
+position = Vector2( 589.065, 1321.97 )
+
+[node name="Helicopter" parent="Stuff" instance=ExtResource( 8 )]
+position = Vector2( 952.093, 938.394 )
+rotation = 1.57079
