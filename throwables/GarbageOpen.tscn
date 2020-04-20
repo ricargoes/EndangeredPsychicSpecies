@@ -9,7 +9,7 @@
 extents = Vector2( 35, 40 )
 
 [node name="GarbageOpen" instance=ExtResource( 2 )]
-mass = 200.0
+mass = 20.0
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="." index="0"]
