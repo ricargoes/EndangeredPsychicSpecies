@@ -32,7 +32,6 @@ telekinesis_strength = 8
 "music",
 ]]
 stream = ExtResource( 5 )
-volume_db = 15.0
 autoplay = true
 
 [node name="SFX" type="AudioStreamPlayer" parent="." groups=[
