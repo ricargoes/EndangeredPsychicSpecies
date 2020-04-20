@@ -2,6 +2,8 @@ extends Node
 
 var alien_wins = false
 
+var city = null
+
 func alien_wins():
 	alien_wins = true
 	get_tree().change_scene("res://level/GameOver.tscn")
