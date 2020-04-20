@@ -85,14 +85,14 @@ margin_right = 448.0
 margin_bottom = 218.0
 rect_min_size = Vector2( 0, 200 )
 text = "YOUR MISSION
-- Escape from Richard hold and explore finding a certain death
+- Escape from Richard's hold and explore (finding a certain death)
 
 CONTROLS
 On bag:
-- LEFT MOUSE: Hold, drag and release for telekinesis
+- LEFT MOUSE: Hold on some objects, drag and let go for telekinesis
 
 On the ground:
-- RIGHT MOUSE: Movement"
+- RIGHT MOUSE: Hold for movement"
 readonly = true
 context_menu_enabled = false
 shortcut_keys_enabled = false
@@ -121,7 +121,7 @@ margin_right = 448.0
 margin_bottom = 218.0
 rect_min_size = Vector2( 0, 200 )
 text = "YOUR MISSION
-- Keep the alien alive and make it reach the helicoppter
+- Keep the alien alive and make it reach the helicopter
 
 CONTROLS
 - WASD: Movement

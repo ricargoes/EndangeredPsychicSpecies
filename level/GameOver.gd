@@ -25,8 +25,8 @@ func _alien_wins():
 	$EndMusic.play()
 
 func _carrier_wins():
-	$VBoxContainer/Who.text = "Frank wins"
-	$VBoxContainer/HBoxContainer/Descrption.text = "Frank manages to keep the alien alive desite its best efforts. The alien is not mature enough to know the world is dangerous. Frank knows best."
+	$VBoxContainer/Who.text = "Richard wins"
+	$VBoxContainer/HBoxContainer/Descrption.text = "Richard manages to keep the endangered alien alive desite its best efforts. The alien is not mature enough to know the world is very dangerous. Richard knows best."
 	$VBoxContainer/HBoxContainer/Picture.texture = preload("res://actors/sprites/daddystanding_reloj4.png")
 	$EndMusic.stream = preload("res://music/Tema1.ogg")
 	$EndMusic.play()
