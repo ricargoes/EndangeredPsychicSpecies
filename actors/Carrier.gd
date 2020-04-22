@@ -70,6 +70,7 @@ func grab():
 		if (alien.get_position() - get_position()).length() < 50:
 			alien.queue_free()
 			carrying = true
+			get_tree().call_group("traps", "mark", false)
 			var music = get_tree().get_nodes_in_group("music")[0]
 			music.play_normal_theme()
 
