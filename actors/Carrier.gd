@@ -38,11 +38,13 @@ func _process(delta):
 			$Walking.stop()
 		move_and_slide(speed, Vector2.ZERO, false, 4, PI/4, false)
 		if movement_dir == Vector2.ZERO:
+			$ChopperPointer.show_pointer()
 			if carrying:
 				$Sprite.play("standing_alien")
 			else:
 				$Sprite.play("standing")
 		else:
+			$ChopperPointer.hide_pointer()
 			if carrying:
 				$Sprite.play("running_alien")
 			else:
@@ -97,3 +99,5 @@ func spawn_alien():
 	var alien = preload("res://actors/AlienBody.tscn").instance()
 	alien.set_position(get_position())
 	get_parent().add_child(alien)
+
+
