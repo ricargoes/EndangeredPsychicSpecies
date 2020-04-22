@@ -6,6 +6,12 @@ func impulse(force):
 	add_force(Vector2.ZERO, force)
 	$ImpulseTime.start()
 
+func PsychicGrabFeedback(enable=true):
+	if enable:
+		$AnimationPlayer.play("psychic_feedback")
+	else:
+		$AnimationPlayer.stop()
+
 func _on_ImpulseTime_timeout():
 	set_applied_force(Vector2.ZERO)
 
