@@ -93,7 +93,7 @@ position = Vector2( 1291.54, 777.26 )
 rotation = 1.58789
 
 [node name="FireHydrantThrowable" parent="Stuff" instance=ExtResource( 14 )]
-position = Vector2( 1574, 504.537 )
+position = Vector2( 1580, 520 )
 rotation = -1.40692
 
 [node name="Streetlight" parent="Stuff" instance=ExtResource( 15 )]
@@ -134,17 +134,17 @@ position = Vector2( 658.431, 213.918 )
 position = Vector2( 1262.32, 210.022 )
 
 [node name="GarbageOpen" parent="Stuff" instance=ExtResource( 9 )]
-position = Vector2( 301.943, 1404.52 )
+position = Vector2( 308.032, 1390.23 )
 
 [node name="GarbageOpen2" parent="Stuff" instance=ExtResource( 9 )]
-position = Vector2( 1429.85, 1392.83 )
+position = Vector2( 1435.94, 1380 )
 
 [node name="GarbageOpen3" parent="Stuff" instance=ExtResource( 9 )]
-position = Vector2( 1404.52, 352.592 )
+position = Vector2( 1389.35, 360 )
 rotation = -1.56189
 
 [node name="GarbageOpen4" parent="Stuff" instance=ExtResource( 9 )]
-position = Vector2( 1396.73, 251.295 )
+position = Vector2( 1389.35, 240 )
 rotation = 1.36835
 
 [node name="Bottle" parent="Stuff" instance=ExtResource( 7 )]

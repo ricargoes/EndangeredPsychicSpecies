@@ -91,7 +91,7 @@ rotation = -3.12731
 broken = true
 
 [node name="GarbageOpen" parent="Stuff" instance=ExtResource( 11 )]
-position = Vector2( 527.357, 903.662 )
+position = Vector2( 534.567, 921.687 )
 rotation = 1.57079
 
 [node name="Manhole" parent="Stuff" instance=ExtResource( 9 )]

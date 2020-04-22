@@ -83,7 +83,7 @@ position = Vector2( 1802.91, 1327.22 )
 position = Vector2( 836.854, 1149.28 )
 
 [node name="GarbageOpen2" parent="Stuff" instance=ExtResource( 11 )]
-position = Vector2( 926.118, 1154.86 )
+position = Vector2( 934.282, 1144.36 )
 
 [node name="Streetlight" parent="Stuff" instance=ExtResource( 9 )]
 position = Vector2( 723.898, 1190.38 )
