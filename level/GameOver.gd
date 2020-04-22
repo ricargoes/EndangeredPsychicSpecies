@@ -19,14 +19,15 @@ func _input(event):
 
 func _alien_wins():
 	$VBoxContainer/Who.text = "Alien wins"
-	$VBoxContainer/HBoxContainer/Descrption.text = "The baby alien gets killed while exploring the world. Well, at least he died FREE!"
-	$VBoxContainer/HBoxContainer/Picture.texture = preload("res://actors/sprites/creaturecrawling2.png")
+	$VBoxContainer/Descrption.text = "The baby alien gets killed while exploring the world. Well, at least he died FREE!"
+	$VBoxContainer/Picture/AnimatedSprite.play("default")
 	$EndMusic.stream = preload("res://music/Tema2.ogg")
 	$EndMusic.play()
 
 func _carrier_wins():
 	$VBoxContainer/Who.text = "Richard wins"
-	$VBoxContainer/HBoxContainer/Descrption.text = "Richard manages to keep the endangered alien alive desite its best efforts. The alien is not mature enough to know the world is very dangerous. Richard knows best."
-	$VBoxContainer/HBoxContainer/Picture.texture = preload("res://actors/sprites/daddystanding_reloj4.png")
+	$VBoxContainer/Descrption.text = "Richard manages to keep the endangered alien alive desite its best efforts. The alien is not mature enough to know the world is very dangerous. Richard knows best."
+	$VBoxContainer/Picture.texture = preload("res://actors/sprites/daddystanding_reloj4.png")
+	$VBoxContainer/Picture/AnimatedSprite.hide()
 	$EndMusic.stream = preload("res://music/Tema1.ogg")
 	$EndMusic.play()
