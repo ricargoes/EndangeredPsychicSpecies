@@ -8,6 +8,7 @@
 "alien_mind",
 ]]
 script = ExtResource( 1 )
+telekinesis_strength_multiplier = 6
 
 [node name="TelekinesisCooldown" type="Timer" parent="."]
 one_shot = true

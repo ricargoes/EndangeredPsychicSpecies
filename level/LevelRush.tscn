@@ -27,7 +27,6 @@ position = Vector2( 3840, 1920 )
 position = Vector2( -737.884, 1020.26 )
 
 [node name="AlienMind" parent="." instance=ExtResource( 2 )]
-telekinesis_strength = 8
 
 [node name="Music" type="AudioStreamPlayer" parent="." groups=[
 "music",
