@@ -43,7 +43,7 @@ margin_top = 774.0
 margin_right = 960.0
 margin_bottom = 894.0
 rect_min_size = Vector2( 300, 120 )
-text = "Richard! You have been chosen for a critical mission for the EPS. A volcan eruption is threatening the life of one the last psychic aliens. Your mission is to retrieve the subject and extract it. You will have a helicopter waiting for you.
+text = "Richard! You have been chosen for a critical mission for the EPS. A volcana eruption is threatening the life of one the last psychic aliens. Your mission is to retrieve the subject and extract it. You will have a helicopter waiting for you.
 
 Careful, the alien is just a baby and most likely will try to escape to a certain death. Keep it alive and do not understimate its telekinetic powers.
 
@@ -54,12 +54,27 @@ shortcut_keys_enabled = false
 selecting_enabled = false
 wrap_enabled = true
 
-[node name="Tutorial" type="Button" parent="VBoxContainer"]
-margin_left = 415.0
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+margin_left = 348.0
 margin_top = 898.0
-margin_right = 545.0
+margin_right = 612.0
 margin_bottom = 918.0
+size_flags_horizontal = 4
+columns = 2
+
+[node name="ShowControls" type="Button" parent="VBoxContainer/GridContainer"]
+margin_right = 130.0
+margin_bottom = 20.0
 rect_min_size = Vector2( 130, 0 )
+size_flags_horizontal = 4
+text = "Show controls"
+
+[node name="Tutorial" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 134.0
+margin_right = 264.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 130, 0 )
+hint_tooltip = "Learn to play!"
 size_flags_horizontal = 4
 text = "Tutorial"
 
@@ -78,6 +93,7 @@ columns = 3
 margin_right = 130.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 130, 0 )
+hint_tooltip = "You can already see the chopper but the volcano is about to erupt. Move fast!"
 text = "Rush"
 
 [node name="Standard" type="Button" parent="VBoxContainer/CenterContainer/GridContainer"]
@@ -85,6 +101,7 @@ margin_left = 134.0
 margin_right = 264.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 130, 0 )
+hint_tooltip = "The standard experience: Medium map, some time to spare."
 text = "Standard"
 
 [node name="Large" type="Button" parent="VBoxContainer/CenterContainer/GridContainer"]
@@ -92,6 +109,7 @@ margin_left = 268.0
 margin_right = 398.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 130, 0 )
+hint_tooltip = "Lots of city, lots of time."
 text = "Take your time"
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
@@ -115,6 +133,7 @@ __meta__ = {
 }
 
 [node name="AlienControls" type="VBoxContainer" parent="."]
+visible = false
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -153,6 +172,7 @@ selecting_enabled = false
 wrap_enabled = true
 
 [node name="RichardControls" type="VBoxContainer" parent="."]
+visible = false
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -171.0
@@ -186,7 +206,8 @@ context_menu_enabled = false
 shortcut_keys_enabled = false
 selecting_enabled = false
 wrap_enabled = true
-[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/ShowControls" to="." method="_on_ShowControls_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Tutorial" to="." method="_on_Tutorial_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/GridContainer/Rush" to="." method="_on_Rush_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/GridContainer/Standard" to="." method="_on_Standard_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/GridContainer/Large" to="." method="_on_Large_pressed"]
