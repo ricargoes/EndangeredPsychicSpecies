@@ -1,8 +1,12 @@
 extends KinematicBody2D
 
-var carrying = true
+export var carrying = true
 var max_speed = 300.0
 var dashing_dir = Vector2.RIGHT
+
+signal alien_grab
+signal alien_drop
+signal stun
 
 func _ready():
 	set_process(true)
@@ -71,6 +75,7 @@ func grab():
 		var alien = aliens.front()
 		if (alien.get_position() - get_position()).length() < 50:
 			alien.queue_free()
+			emit_signal("alien_grab")
 			carrying = true
 			get_tree().call_group("traps", "mark", false)
 			var music = get_tree().get_nodes_in_group("music")[0]
@@ -82,6 +87,7 @@ func hit():
 		drop_alien()
 
 func drop_alien():
+	emit_signal("alien_drop")
 	carrying = false
 	spawn_alien()
 	get_tree().call_group("traps", "mark", true)
@@ -89,6 +95,7 @@ func drop_alien():
 	music.play_freedom()
 
 func stun():
+	emit_signal("stun")
 	$StunCooldown.start()
 	$HeadStars.emitting = true
 

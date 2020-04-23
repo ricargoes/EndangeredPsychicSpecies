@@ -52,29 +52,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 28 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 31 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 23 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "standing_alien",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "running",
-"speed": 10.0
+"name": "standing_watch",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "standing",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "dashing",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 25 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 23 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "standing_watch",
 "speed": 8.0
 }, {
 "frames": [ ExtResource( 48 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 46 ) ],
@@ -82,10 +67,25 @@ animations = [ {
 "name": "dashing_alien",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "running",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "running_alien",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 28 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "standing_alien",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "dashing",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]

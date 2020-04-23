@@ -9,7 +9,7 @@ func _input(event):
 
 
 func _on_Tutorial_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://level/LevelTutorial.tscn")
 
 
 func _on_Rush_pressed():

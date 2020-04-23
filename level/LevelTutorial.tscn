@@ -1,0 +1,401 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://actors/Carrier.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenary/rough_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://scenary/cracks_path_vertical_tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://actors/AlienMind.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenary/roof_autotile.tres" type="TileSet" id=5]
+[ext_resource path="res://music/Tema1.ogg" type="AudioStream" id=6]
+[ext_resource path="res://scenary/cracks_path_horizontal_tileset.tres" type="TileSet" id=7]
+[ext_resource path="res://scenary/cracks_asfalt_tileset.tres" type="TileSet" id=8]
+[ext_resource path="res://scenary/detail_tileset.tres" type="TileSet" id=9]
+[ext_resource path="res://scenary/cells/EndPoint.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenary/Tree.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenary/CarRed.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenary/CarBlue.tscn" type="PackedScene" id=13]
+[ext_resource path="res://actors/AlienBody.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenary/FireHydrant.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenary/Streetlight.tscn" type="PackedScene" id=16]
+[ext_resource path="res://throwables/Bottle.tscn" type="PackedScene" id=17]
+[ext_resource path="res://throwables/GarbageOpen.tscn" type="PackedScene" id=18]
+[ext_resource path="res://throwables/GarbageBag.tscn" type="PackedScene" id=19]
+[ext_resource path="res://throwables/FireHydrantThrowable.tscn" type="PackedScene" id=20]
+[ext_resource path="res://UI/circle.png" type="Texture" id=21]
+[ext_resource path="res://level/LevelTutorial.gd" type="Script" id=22]
+[ext_resource path="res://level/Music.gd" type="Script" id=23]
+[ext_resource path="res://UI/pointer.png" type="Texture" id=24]
+[ext_resource path="res://UI/tutorial18.png" type="Texture" id=25]
+[ext_resource path="res://UI/tutorial5.png" type="Texture" id=26]
+[ext_resource path="res://UI/tutorial15.png" type="Texture" id=27]
+[ext_resource path="res://UI/tutorial16.png" type="Texture" id=28]
+[ext_resource path="res://UI/tutorial4.png" type="Texture" id=29]
+[ext_resource path="res://UI/tutorial7.png" type="Texture" id=30]
+[ext_resource path="res://UI/tutorial6.png" type="Texture" id=31]
+[ext_resource path="res://UI/tutorial17.png" type="Texture" id=32]
+[ext_resource path="res://UI/tutorial2.png" type="Texture" id=33]
+[ext_resource path="res://UI/tutorial14.png" type="Texture" id=34]
+[ext_resource path="res://UI/tutorial9.png" type="Texture" id=35]
+[ext_resource path="res://UI/tutorial8.png" type="Texture" id=36]
+[ext_resource path="res://UI/tutorial3.png" type="Texture" id=37]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48.3188, 50.704 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 50.9998, 231.762 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "blink"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.984314, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 40, 40 ), Vector2( 40, 550 ), Vector2( 40, 40 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 37 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="LevelTutorial" type="Node2D"]
+script = ExtResource( 22 )
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 240, 240 )
+format = 1
+tile_data = PoolIntArray( -196609, 2, 0, -262144, 2, 0, -262143, 2, 0, -262142, 2, 0, -262141, 2, 0, -262140, 2, 0, -131073, 1, 0, -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1, 0, -65540, 2, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 1, 0, -131068, 1, 0, -4, 2, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, 65532, 2, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 131068, 2, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 1, 0, 65540, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 262143, 2, 0, 196608, 2, 0, 196609, 2, 0, 196610, 2, 0, 196611, 2, 0, 196612, 2, 0 )
+
+[node name="Details" type="TileMap" parent="."]
+tile_set = ExtResource( 9 )
+cell_size = Vector2( 40, 40 )
+format = 1
+tile_data = PoolIntArray( -720899, -1610612726, 0, -786430, -1610612726, 0, -786425, -1610612726, 0, -786420, -1610612726, 0, -655363, -1610612726, 0, -720894, -1610612726, 0, -720889, -1610612726, 0, -720884, -1610612726, 0, -589827, -1610612726, 0, -655358, -1610612726, 0, -655353, -1610612726, 0, -655348, -1610612726, 0, -524291, -1610612726, 0, -589822, -1610612726, 0, -589817, -1610612726, 0, -589812, -1610612726, 0, -131075, -1610612726, 0, -196606, -1610612726, 0, -196601, -1610612726, 0, -196596, -1610612726, 0, -65539, -1610612726, 0, -131070, -1610612726, 0, -131065, -1610612726, 0, -131060, -1610612726, 0, -3, -1610612726, 0, -65534, -1610612726, 0, -65529, -1610612726, 0, -65524, -1610612726, 0, -65517, 10, 0, -65514, 10, 0, -65511, 10, 0, -65508, 10, 0, -65505, 10, 0, -65502, 10, 0, -65499, 10, 0, -65496, 10, 0, -65493, 10, 0, -65490, 10, 0, -65487, 10, 0, -65484, 10, 0, 65533, -1610612726, 0, 2, -1610612726, 0, 7, -1610612726, 0, 12, -1610612726, 0, 131069, -1610612726, 0, 65538, -1610612726, 0, 65543, -1610612726, 0, 65548, -1610612726, 0, 524285, -1610612726, 0, 458754, -1610612726, 0, 458759, -1610612726, 0, 458764, -1610612726, 0, 589821, -1610612726, 0, 524290, -1610612726, 0, 524295, -1610612726, 0, 524300, -1610612726, 0, 655357, -1610612726, 0, 589826, -1610612726, 0, 589831, -1610612726, 0, 589836, -1610612726, 0, 720893, -1610612726, 0, 655362, -1610612726, 0, 655367, -1610612726, 0, 655372, -1610612726, 0 )
+
+[node name="CracksAsfalt" type="TileMap" parent="."]
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 240, 240 )
+format = 1
+
+[node name="CracksPathH" type="TileMap" parent="."]
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 240, 120 )
+format = 1
+
+[node name="CracksPathV" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 120, 240 )
+format = 1
+
+[node name="Roof" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 240, 240 )
+format = 1
+tile_data = PoolIntArray( -196614, 0, 131075, -196613, 0, 196609, -196612, 0, 1, -196611, 0, 196609, -196610, 0, 2, -262139, 0, 131075, -262138, 0, 196609, -262137, 0, 196609, -262136, 0, 2, -131078, 0, 196610, -131077, 0, 3, -131076, 0, 131073, -131075, 0, 4, -131074, 0, 65538, -196603, 0, 65536, -196602, 0, 65537, -196601, 0, 65537, -196600, 0, 262144, -65542, 0, 65536, -65541, 0, 65538, -65539, 0, 65536, -65538, 0, 65538, -131067, 0, 131072, -131066, 0, 131073, -131065, 0, 196608, -131064, 0, 131074, -6, 0, 65536, -5, 0, 262144, -3, 0, 65536, -2, 0, 65538, 65530, 0, 65536, 65531, 0, 262144, 65533, 0, 65536, 65534, 0, 65538, 131066, 0, 65536, 131067, 0, 262144, 131069, 0, 196610, 131070, 0, 65538, 65541, 0, 131075, 65542, 0, 1, 65543, 0, 1, 65544, 0, 131076, 196602, 0, 65536, 196603, 0, 65539, 196604, 0, 1, 196605, 0, 65540, 196606, 0, 65538, 131077, 0, 196610, 131078, 0, 65537, 131079, 0, 65537, 131080, 0, 65538, 262138, 0, 196611, 262139, 0, 196608, 262140, 0, 131073, 262141, 0, 196608, 262142, 0, 196612, 196613, 0, 131072, 196614, 0, 131073, 196615, 0, 131073, 196616, 0, 196612 )
+
+[node name="EndPoint" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2160, -958.94 )
+
+[node name="ThrowableObject" parent="EndPoint/Stuff/Manhole" index="3"]
+position = Vector2( 41.25, 2.5 )
+
+[node name="Manhole2" parent="EndPoint/Stuff" index="1"]
+position = Vector2( 600.065, 1370.97 )
+
+[node name="ThrowableObject" parent="EndPoint/Stuff/Manhole2" index="3"]
+position = Vector2( -62.3625, -53.4099 )
+
+[node name="Stuff" type="Node2D" parent="."]
+
+[node name="Tree" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( -176, -844.922 )
+
+[node name="Tree2" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( -40, -844.922 )
+
+[node name="Tree21" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( -847.528, -329.401 )
+
+[node name="Tree22" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( -854.738, 5.86694 )
+
+[node name="Tree23" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( -854.738, 330.32 )
+
+[node name="Tree3" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 96, -844.922 )
+
+[node name="Tree4" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 240, -844.922 )
+
+[node name="Tree5" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 371.1, -844.922 )
+
+[node name="Tree6" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 515, -844.922 )
+
+[node name="Tree7" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 658.5, -844.922 )
+
+[node name="Tree8" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 808, -844.922 )
+
+[node name="Tree17" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 952, -844.922 )
+
+[node name="Tree18" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 1104, -843.922 )
+
+[node name="Tree16" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( -168, 816 )
+
+[node name="Tree15" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( -32, 816 )
+
+[node name="Tree14" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 104, 816 )
+
+[node name="Tree13" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 248, 816 )
+
+[node name="Tree12" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 379.1, 816 )
+
+[node name="Tree11" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 523, 816 )
+
+[node name="Tree10" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 666.5, 816 )
+
+[node name="Tree9" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 816, 816 )
+
+[node name="Tree20" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 960, 816 )
+
+[node name="Tree19" parent="Stuff" instance=ExtResource( 11 )]
+position = Vector2( 1112, 817 )
+
+[node name="CarRed" parent="Stuff" instance=ExtResource( 12 )]
+position = Vector2( 683.06, -660.291 )
+
+[node name="CarRed4" parent="Stuff" instance=ExtResource( 12 )]
+position = Vector2( 824.806, -352.978 )
+rotation = -1.57079
+
+[node name="CarRed6" parent="Stuff" instance=ExtResource( 12 )]
+position = Vector2( 569.95, -341.434 )
+rotation = -1.57079
+
+[node name="CarRed7" parent="Stuff" instance=ExtResource( 12 )]
+position = Vector2( 368.83, -411.333 )
+rotation = -0.785397
+
+[node name="CarRed9" parent="Stuff" instance=ExtResource( 12 )]
+position = Vector2( 1564.2, -142.054 )
+rotation = -0.261799
+
+[node name="CarRed11" parent="Stuff" instance=ExtResource( 12 )]
+position = Vector2( 1577.21, 193.061 )
+rotation = -1.57079
+
+[node name="CarWheel" parent="Stuff" instance=ExtResource( 13 )]
+position = Vector2( 691.188, -463.981 )
+rotation = -2.61799
+
+[node name="ThrowableMarker" type="Sprite" parent="Stuff/CarWheel/Wheel" index="6"]
+visible = false
+position = Vector2( 30.3405, 50.7874 )
+rotation = -2.0944
+scale = Vector2( 0.8, 0.6 )
+z_index = 100
+texture = ExtResource( 24 )
+
+[node name="FireHydrant" parent="Stuff" instance=ExtResource( 15 )]
+position = Vector2( 956.662, -389.84 )
+
+[node name="FireHydrant2" parent="Stuff" instance=ExtResource( 15 )]
+position = Vector2( 389.84, -523.772 )
+
+[node name="Streetlight" parent="Stuff" instance=ExtResource( 16 )]
+position = Vector2( 569.214, -471.714 )
+rotation = 3.14159
+
+[node name="FireHydrantThrowable" parent="Stuff" instance=ExtResource( 20 )]
+position = Vector2( 2876.44, -379.478 )
+
+[node name="FireHydrantThrowable2" parent="Stuff" instance=ExtResource( 20 )]
+position = Vector2( 2884.03, 368.093 )
+
+[node name="Bottle" parent="Stuff" instance=ExtResource( 17 )]
+position = Vector2( 2865.06, -239.071 )
+
+[node name="Bottle2" parent="Stuff" instance=ExtResource( 17 )]
+position = Vector2( 2971.31, -231.481 )
+
+[node name="Bottle3" parent="Stuff" instance=ExtResource( 17 )]
+position = Vector2( 2982.69, -330.146 )
+
+[node name="Bottle4" parent="Stuff" instance=ExtResource( 17 )]
+position = Vector2( 3035.82, -288.403 )
+
+[node name="GarbageBag" parent="Stuff" instance=ExtResource( 19 )]
+position = Vector2( 3016.85, 383.272 )
+
+[node name="GarbageBag2" parent="Stuff" instance=ExtResource( 19 )]
+position = Vector2( 3062.38, 314.967 )
+
+[node name="Streetlight2" parent="Stuff" instance=ExtResource( 16 )]
+position = Vector2( 2556.25, 196.508 )
+broken = true
+
+[node name="Streetlight3" parent="Stuff" instance=ExtResource( 16 )]
+position = Vector2( 2546.8, -195.214 )
+rotation = -3.14159
+broken = true
+
+[node name="GarbageOpen" parent="Stuff" instance=ExtResource( 18 )]
+position = Vector2( 468.431, -707.391 )
+rotation = -3.14159
+
+[node name="GarbageOpen2" parent="Stuff" instance=ExtResource( 18 )]
+position = Vector2( 2435.33, 185.55 )
+rotation = -6.28318
+
+[node name="GarbageOpen3" parent="Stuff" instance=ExtResource( 18 )]
+position = Vector2( 2697.61, -281.725 )
+rotation = -4.71238
+
+[node name="StuffTutorial" type="Node2D" parent="."]
+
+[node name="DestCarAlien" parent="StuffTutorial" instance=ExtResource( 12 )]
+position = Vector2( 1113.43, -364.266 )
+rotation = -1.83259
+
+[node name="DestCarHeli" parent="StuffTutorial" instance=ExtResource( 12 )]
+position = Vector2( 1580.47, 48.3182 )
+rotation = 1.0472
+
+[node name="MovementAlien" type="Area2D" parent="StuffTutorial"]
+position = Vector2( 1084.85, -480.381 )
+collision_layer = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StuffTutorial/MovementAlien"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StuffTutorial/MovementAlien"]
+self_modulate = Color( 0.960784, 0.494118, 0.447059, 0.741176 )
+position = Vector2( 0, -1.948 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 21 )
+
+[node name="MovementCarrier" type="Area2D" parent="StuffTutorial"]
+position = Vector2( 29.9995, -337.884 )
+collision_layer = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StuffTutorial/MovementCarrier"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StuffTutorial/MovementCarrier"]
+self_modulate = Color( 0.960784, 0.494118, 0.447059, 0.741176 )
+position = Vector2( 0, -1.948 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 21 )
+
+[node name="WaitForHit" type="Area2D" parent="StuffTutorial"]
+position = Vector2( 2312.73, -2.39172 )
+collision_layer = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StuffTutorial/WaitForHit"]
+shape = SubResource( 2 )
+
+[node name="Carrier" parent="." instance=ExtResource( 1 )]
+position = Vector2( 398.208, 5.30511 )
+carrying = false
+
+[node name="AlienMind" parent="." instance=ExtResource( 4 )]
+
+[node name="Music" type="AudioStreamPlayer" parent="." groups=[
+"music",
+]]
+stream = ExtResource( 6 )
+autoplay = true
+script = ExtResource( 23 )
+
+[node name="SFX" type="AudioStreamPlayer" parent="." groups=[
+"sfx",
+]]
+
+[node name="AlienBody" parent="." instance=ExtResource( 14 )]
+position = Vector2( 809.96, -709.298 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Instructions" type="TextEdit" parent="UI"]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 590.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 500, 120 )
+readonly = true
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Instructions"]
+playback_speed = 3.0
+anims/blink = SubResource( 3 )
+
+[node name="TelekinesisHelp" type="AnimatedSprite" parent="UI"]
+visible = false
+position = Vector2( 189.687, 304.056 )
+z_index = 100
+frames = SubResource( 4 )
+[connection signal="body_entered" from="StuffTutorial/MovementAlien" to="." method="_on_MovementAlien_body_entered"]
+[connection signal="body_entered" from="StuffTutorial/MovementCarrier" to="." method="_on_MovementCarrier_body_entered"]
+[connection signal="body_entered" from="StuffTutorial/WaitForHit" to="." method="_on_WaitForHit_body_entered"]
+[connection signal="alien_grab" from="Carrier" to="." method="_on_Carrier_alien_grab"]
+[connection signal="stun" from="Carrier" to="." method="_on_Carrier_stun"]
+
+[editable path="EndPoint"]
+
+[editable path="EndPoint/Stuff/Manhole"]
+
+[editable path="EndPoint/Stuff/Manhole2"]
+
+[editable path="Stuff/CarWheel"]
