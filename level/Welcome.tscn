@@ -33,15 +33,15 @@ __meta__ = {
 }
 
 [node name="Title" type="TextureRect" parent="VBoxContainer"]
-margin_top = 137.0
+margin_top = 106.0
 margin_right = 960.0
-margin_bottom = 801.0
+margin_bottom = 770.0
 texture = ExtResource( 1 )
 
 [node name="Descrption" type="TextEdit" parent="VBoxContainer"]
-margin_top = 805.0
+margin_top = 774.0
 margin_right = 960.0
-margin_bottom = 925.0
+margin_bottom = 894.0
 rect_min_size = Vector2( 300, 120 )
 text = "Richard! You have been chosen for a critical mission for the EPS. A volcan eruption is threatening the life of one the last psychic aliens. Your mission is to retrieve the subject and extract it. You will have a helicopter waiting for you.
 
@@ -54,12 +54,65 @@ shortcut_keys_enabled = false
 selecting_enabled = false
 wrap_enabled = true
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 929.0
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
+margin_left = 415.0
+margin_top = 898.0
+margin_right = 545.0
+margin_bottom = 918.0
+rect_min_size = Vector2( 130, 0 )
+size_flags_horizontal = 4
+text = "Tutorial"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 922.0
 margin_right = 960.0
-margin_bottom = 943.0
-text = "Press ENTER  to start"
-align = 1
+margin_bottom = 942.0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/CenterContainer"]
+margin_left = 281.0
+margin_right = 679.0
+margin_bottom = 20.0
+columns = 3
+
+[node name="Rush" type="Button" parent="VBoxContainer/CenterContainer/GridContainer"]
+margin_right = 130.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 130, 0 )
+text = "Rush"
+
+[node name="Standard" type="Button" parent="VBoxContainer/CenterContainer/GridContainer"]
+margin_left = 134.0
+margin_right = 264.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 130, 0 )
+text = "Standard"
+
+[node name="Large" type="Button" parent="VBoxContainer/CenterContainer/GridContainer"]
+margin_left = 268.0
+margin_right = 398.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 130, 0 )
+text = "Take your time"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_left = 254.0
+margin_top = 946.0
+margin_right = 704.0
+margin_bottom = 950.0
+rect_min_size = Vector2( 450, 0 )
+size_flags_horizontal = 4
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_left = 460.0
+margin_top = 954.0
+margin_right = 500.0
+margin_bottom = 974.0
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AlienControls" type="VBoxContainer" parent="."]
 anchor_left = 1.0
@@ -133,3 +186,8 @@ context_menu_enabled = false
 shortcut_keys_enabled = false
 selecting_enabled = false
 wrap_enabled = true
+[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/GridContainer/Rush" to="." method="_on_Rush_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/GridContainer/Standard" to="." method="_on_Standard_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/GridContainer/Large" to="." method="_on_Large_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
